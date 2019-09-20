@@ -22,6 +22,11 @@
 
 .nav li a:hover {
   background-color: rgb(141, 117, 117);
+
+}
+
+.nav {
+  border: solid black 2px;
 }
 
 #pesq {
@@ -48,7 +53,7 @@ img {
 
 .sidebar li a {
   display: block;
-  width: 80px;
+  width: 60px;
 }
 
 .sidebar ul {
@@ -57,11 +62,13 @@ img {
   padding: 0;
   width: 200px;
   background-color: #f1f1f1;
+
 }
 
 .sidebar li a {
+  display: block;
   color: #000;
-  padding: 8px 30%;
+  padding: 10px 35%;
   text-decoration: none;
   text-align: center;
 }
@@ -69,14 +76,26 @@ img {
 .sidebar li a:hover {
   background-color: #555;
   color: white;
+
 }
 
 .sidebar strong {
   text-align: center;
-  margin: 20%;
-  padding: 4px 10px;
+  margin: 17%;
+  padding: 10px 15px;
 }
 
 .sidebar {
-  margin: 12px 0px;
+  margin: 3px 0px;
+  width: 200px;
+  border: solid black 2px;
+}
+
+#ativado {
+  background-color: #555;
+  color: white;
+}
+.cadastro {
+  width:100px; 
+  height:100px;
 }
