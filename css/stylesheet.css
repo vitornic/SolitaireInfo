@@ -89,13 +89,26 @@ img {
   margin: 3px 0px;
   width: 200px;
   border: solid black 2px;
+  float:left;
 }
 
 #ativado {
   background-color: #555;
   color: white;
 }
+.cadastro input {
+  margin:20px;
+}
 .cadastro {
-  width:100px; 
-  height:100px;
+  width:200px; 
+  height:300px;
+  border-radius: 15%;
+  border:solid 2px #95a5a6;
+}
+.divcadastro {
+  border:solid black 2px;
+  position: absolute;
+  padding: 20px;
+  margin-top:20%;
+  margin-left: 40%;
 }
