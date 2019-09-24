@@ -112,3 +112,34 @@ img {
   margin-top:20%;
   margin-left: 40%;
 }
+
+.box img {
+  border: 2px solid red;
+  float: right;
+  margin: 3px 0px 1px;
+}
+
+
+.promo {
+  height: 200px;
+}
+
+.promo1 img {
+  border: 2px solid cyan;
+  margin: 5px;
+}
+
+.promo2 img {
+  border: 2px solid cyan;
+  margin: 5px;
+}
+
+.promo3 img {
+  border: 2px solid cyan;
+  margin: 5px;
+}
+
+.promo4 img {
+  border: 2px solid cyan;
+  margin: 5px;
+}
