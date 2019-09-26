@@ -1,10 +1,11 @@
+<!DOCTYPE html>
 <html>
 
 <head>
     <link rel="icon" type="image/png" href="images/fav.png">
     <meta charset="utf-8">
-    <title>Cadastro</title>
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <title>Áudio</title>
 </head>
 
 <body>
@@ -15,10 +16,11 @@
             <button id="lupa"><img src="images/lupa.png"></button>
 
             <li><a href="Login.html">Login</a></li>
-            <li><a id="ativado" href="Cadastro.html">Cadastro</a></li>
+            <li><a href="Cadastro.html">Cadastro</a></li>
             <li><a href="Formulário.html">Formulário</a></li>
         </ul>
     </div>
+
     <div class="sidebar">
         <ul>
             <strong>CATEGORIAS</strong>
@@ -28,19 +30,30 @@
             <li><a href="Jogos.html">Jogos</a></li>
             <li><a href="Hardware.html">Armazenamento</a></li>
             <li><a href="Vídeo.html">Vídeo</a></li>
-            <li><a href="Áudio.html">Áudio</a></li>
+            <li><a id="ativado" href="Áudio.html">Áudio</a></li>
             <li><a href="Gabinetes.html">Gabinetes</a></li>
             <li><a href="Redes.html">Redes</a></li>
         </ul>
     </div>
-    <div class="divcadastro">
-        <fieldset class="cadastro">
-        <legend class="legends" style="text-align:center">Cadastro</legend>
-        <form method="post" action="cadastro">  
-            <br><input type="text" name="email" size="30" maxlength="45" placeholder="Digite seu email:"><br>
-                <input type="password" name="senha" size="30" maxlength="45" placeholder="Digite sua senha:"><br>
-                <input type="SUBMIT" value="Cadastrar">
-                <input type="RESET" name="Cancelar" value="Limpar"><br>
-        </form>
-    <div/>
+
+    <div class="container">
+        <div class="pricing-table table1">
+            <div class="pricing-header">
+                <div class="title">Teste</div>
+            </div>
+            <div class="price"><img src="images/audio.png" width="233" height="200" </div> <ul class="pricing-list">
+                <li><strong>speaker</strong> sony srsxb01b</li>
+                <div class="border"></div>
+                <li><strong>marca</strong> sony</li>
+                <div class="border"></div>
+                <li><strong>conexões</strong> bluetooth/usb/micro sd</li>
+                <div class="border"></div>
+                <li><strong>bateria</strong> 6 horas</li>
+                </ul>
+                <a href="#">Adquira Já</a>
+            </div>
+        </div>
+    </div>
 </body>
+
+</html>

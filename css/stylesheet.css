@@ -1,9 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans",sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(125deg,#34495e,#2ecc71);
+}
+
 .nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #95a5a6;
+  background-color: #363a3c;
 }
 
 .nav li {
@@ -33,6 +46,7 @@
   padding: 12px 26px;
   margin: 6px;
   margin-left: 50px;
+  background-color: #313436;
   width: 760px;
 }
 
@@ -47,48 +61,46 @@ img {
 
 .sidebar ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 
 .sidebar li a {
-  display: block;
-  width: 60px;
+  text-align: center;
 }
 
 .sidebar ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 200px;
-  background-color: #f1f1f1;
+  width: 222px;
+  background-color: #1c1e1f;
 
 }
 
 .sidebar li a {
   display: block;
-  color: #000;
-  padding: 10px 35%;
+  color: white;
+  padding:10px 25%;
   text-decoration: none;
   text-align: center;
 }
 
 .sidebar li a:hover {
-  background-color: #555;
+  background-color: rgb(42, 41, 41);
   color: white;
 
 }
 
 .sidebar strong {
-  text-align: center;
-  margin: 17%;
-  padding: 10px 15px;
+  margin-left: 27%;
+  color:white;
+  border-style: 
 }
 
 .sidebar {
-  margin: 3px 0px;
-  width: 200px;
-  border: solid black 2px;
+  margin-top: 20px;
+
+  width: 222px;
+  border: solid gray 2px;
   float:left;
 }
 
@@ -99,16 +111,315 @@ img {
 .cadastro input {
   margin:20px;
 }
+
+
+.box img {
+  border: 2px solid red;
+  float: right;
+  margin: 20px 38px 10px 1px;
+
+}
+
+
+.promo {
+  float: left;
+  width: 80%;
+  margin-left: 19.6%;
+}
+
+.promo1 img {
+  border: 2px solid red;
+  margin: 8.5px;
+  padding: .5px;
+}
+
+.promo2 img {
+  border: 2px solid red;
+  margin: 8.5px;
+  padding: .5px;
+}
+
+.promo3 img {
+  border: 2px solid red;
+  margin: 8.5px;
+  padding: .5px;
+}
+
+.promo4 img {
+  border: 2px solid red;
+  margin: 8.5px;
+  padding: .5px;
+}
+
+
+.container{
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pricing-table {
+  background: #1c1e1f;
+
+  flex: 1;
+  margin: 10px;
+  text-transform: uppercase;
+}
+
+.pricing-header {
+  color: #fff;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.title {
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%,50%);
+  width: 80%;
+  max-width: 360px;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.pricing-list li {
+  margin: 8px 0;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+}
+
+.border {
+  width: 80px;
+  height: 1px;
+  background: #ddd;
+  margin: auto;
+}
+
+.pricing-table a {
+  display: block;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 14px;
+  border: 1px solid;
+  max-width: 360px;
+  transition: .2s linear;
+}
+.pricing-table a:hover {
+  border-radius: 30px;
+}
+.table1 .pricing-header{
+  background: #2980b9;
+}
+
+
+.table1 .title{
+  background-image: linear-gradient(125deg,#3b25bb,#ff0000);
+}
+
+.table1 a{
+  color: #2980b9;
+}
+
+.table1 a:hover{
+  background: #2980b9;
+  color: #fff;
+}
+
+@media screen and (max-width:780px) {
+  .pricing-table{
+    flex: 100%;
+  }
+}
+
+.formulario legend {
+  color:lightgray;
+  font-size: 30px;
+  font-family: Metropoli;
+}
+.formulario textarea {
+ width: 245px;
+ height: 100px;
+ margin: 7 30;
+ border: solid gray 2px;
+}
+
+.formulario input[type = 'submit'] {
+border:1px solid #25692A;
+border-radius:24px;
+display:inline-block;
+cursor:pointer;
+font-family:Verdana;
+font-weight:bold;
+font-size:13px;
+padding:6px 6px;
+text-decoration:none;
+margin: 7 30;
+}
+
+.formulario input[type = 'reset'] {
+border:1px solid #25692A;
+border-radius:24px;
+display:inline-block;
+cursor:pointer;
+font-family:Verdana;
+font-weight:bold;
+font-size:13px;
+padding:6px 6px;
+text-decoration:none;
+margin-top: 7 ;
+margin-left: 60px;
+}
+
+.formulario {
+  width:300px; 
+  height: 350px;
+  border-radius: 24px;
+  border:solid 2px #95a5a6;
+}
+.divformulario {
+
+  position: absolute;
+  padding: 20px;
+  margin-top:8%;
+  margin-left: 40%;
+}
+
+.formulario input[type = 'email'],input[type = 'text'],input[type = 'number'],input[type= 'password'] {
+  margin-top:1px;
+  color:black;
+  width: 245px;
+  border:solid gray 2px;
+  padding: 2px;
+  margin: 7 30;
+}
+
+.cadastro input[type = 'submit'] {
+border:1px solid #25692A;
+border-radius:24px;
+display:inline-block;
+cursor:pointer;
+font-family:Verdana;
+font-weight:bold;
+font-size:13px;
+padding:6px 6px;
+text-decoration:none;
+margin: 7 30;
+}
+
+.cadastro input[type = 'reset'] {
+border:1px solid #25692A;
+border-radius:24px;
+display:inline-block;
+cursor:pointer;
+font-family:Verdana;
+font-weight:bold;
+font-size:13px;
+padding:6px 6px;
+text-decoration:none;
+margin-top: 7 ;
+margin-left: 60px;
+}
+
 .cadastro {
-  width:200px; 
-  height:300px;
-  border-radius: 15%;
+  width:300px; 
+  height: 200px;
+  border-radius: 24px;
   border:solid 2px #95a5a6;
 }
 .divcadastro {
-  border:solid black 2px;
+
   position: absolute;
   padding: 20px;
-  margin-top:20%;
+  margin-top:8%;
   margin-left: 40%;
+}
+
+.cadastro input[type = 'email'] ,input[type= 'password'] {
+  margin-top:1px;
+  color:black;
+  width: 245px;
+  border:solid gray 2px;
+  padding: 2px;
+  margin: 7 30;
+}
+
+.cadastro legend {
+  color:lightgray;
+  font-size: 30px;
+  font-family: Metropoli;
+
+}
+
+
+
+.login input[type = 'submit'] {
+border:1px solid #25692A;
+border-radius:24px;
+display:inline-block;
+cursor:pointer;
+font-family:Verdana;
+font-weight:bold;
+font-size:13px;
+padding:6px 6px;
+text-decoration:none;
+margin: 7 30;
+}
+
+.login input[type = 'reset'] {
+border:1px solid #25692A;
+border-radius:24px;
+display:inline-block;
+cursor:pointer;
+font-family:Verdana;
+font-weight:bold;
+font-size:13px;
+padding:6px 6px;
+text-decoration:none;
+margin-top: 7 ;
+margin-left: 60px;
+}
+
+.login {
+  width:300px; 
+  height: 200px;
+  border-radius: 24px;
+  border:solid 2px #95a5a6;
+}
+.divlogin {
+
+  position: absolute;
+  padding: 20px;
+  margin-top:8%;
+  margin-left: 40%;
+}
+
+.login input[type = 'email'] ,input[type= 'password'] {
+  margin-top:1px;
+  color:black;
+  width: 245px;
+  border:solid gray 2px;
+  padding: 2px;
+  margin: 7 30;
+}
+
+.login legend {
+  color:lightgray;
+  font-size: 30px;
+  font-family: Metropoli;
+
 }
