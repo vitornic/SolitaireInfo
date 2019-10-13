@@ -4,6 +4,7 @@
     <link rel="icon" type="image/png" href="../images/fav.png">
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+    <title>Formulário</title>
 </head>
 
 <body>
@@ -12,7 +13,7 @@
             <a href="inicio.html"><img src="../images/thumbnail_Logo Solitarie.png"></a>
             <input id="pesq" type="search" placeholder="PESQUISAR" q="googlesearch">
             <button id="lupa"><img src="../images/lupa.png"></button>
-    
+
             <div class="dropdown">
                 <button class="dropbtn"><a href="#">Traduzir</a></button>
                 <div class="dropdown-content">
@@ -39,15 +40,66 @@
             <li><a href="Redes.html">Redes</a></li>
         </ul>
     </div>
+
     <div class="divformulario">
         <fieldset class="formulario">
-        <legend class="legends" style="text-align:center">Formulário</legend>
-        <form method="post" action="formulario">  
-            <br><input type="text" name="nome" size="30" maxlength="45" placeholder="Digite seu Nome:"><br>
+            <legend class="legends" style="text-align:center">Formulário</legend>
+            <form method="post" action="formulario">
+                <br><input type="text" name="nome" size="30" maxlength="45" placeholder="Digite seu Nome:"><br>
                 <input type="email" name="email" size="30" maxlength="45" placeholder="Digite seu Email:"><br>
                 <input type="number" name="telefone" size="30" maxlength="45" placeholder="Digite seu Telefone:"><br>
                 <input type="SUBMIT" value="Cadastrar">
                 <input type="RESET" name="limpar" value="Limpar"><br>
-        </form>
-    <div/>
+            </form>
+        </fieldset>
+    </div>
 </body>
+
+<div class="main">FIX</div>
+<footer class="footer-distributed">
+    <div class="footer-left">
+        <h3>Solitarie<span>Informática</span></h3>
+
+        <p class="footer-links">
+            <a href="inicio.html">Início</a>
+            ·
+            <a href="formulario.html">Formulário</a>
+            ·
+            <a href="cadastro.html">Cadastro</a>
+        </p>
+
+        <p class="footer-company-name">Solitarie - João Vitor Nicolette - Eric Carmona Barroquelo &copy; 2019</p>
+    </div>
+
+    <div class="footer-center">
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>R. Frei Galvão</span> Jaú, SP</p>
+        </div>
+
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>+55 14 123456789</p>
+        </div>
+
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:support@company.com">contact@solitarie.com</a></p>
+        </div>
+    </div>
+
+    <div class="footer-right">
+
+        <p class="footer-company-about">
+            <span>About the company</span>
+        </p>
+
+        <div class="footer-icons">
+            <a href="#"><i class="fa fa-facebook"><img src="../images/icons8-facebook-32.png"></i></a>
+            <a href="#"><i class="fa fa-twitter"><img src="../images/icons8-twitter-32.png"></i></a>
+            <a href="#"><i class="fa fa-linkedin"><img src="../images/icons8-linkedin-32.png"></i></a>
+            <a href="#"><i class="fa fa-github"><img src="../images/icons8-github-32.png"></i></a>
+        </div>
+    </div>
+</footer>
+</html>
