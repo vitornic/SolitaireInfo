@@ -41,65 +41,14 @@
         </ul>
     </div>
 
-    <div class="divlogin">
-        <fieldset class="login">
-            <legend class="legends" style="text-align:center">Login</legend>
-            <form method="post" action="login">
-                <br><input type="email" name="email" size="30" maxlength="45" placeholder="Digite seu email:"><br>
-                <input type="password" name="senha" size="30" maxlength="45" placeholder="Digite sua senha:"><br>
-                <input type="SUBMIT" value="Cadastrar">
-                <input type="RESET" name="Cancelar" value="Limpar"><br>
-            </form>
-        </fieldset>
-    </div>
+    <form method="POST" action="php/login.php" class="boxform" accept-charset="UTF-8">
+        <h1>login cliente</h1>
+        <input placeholder="Email" type="Email" name="Email" required="true" maxlength="100" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="exemple@exemple.com">
+        <input placeholder="Senha" type="password" size="20" name="Senha" required = "true">
+        <input type="submit" value="ENTRAR" name="entrar">
+        <input type="reset" value="LIMPAR">
+        <h4><a href="index.html">Esqueceu a senha ?</a></h4>
+        <h4><a href="cadastro.html">Não tem um cadastro ?</h4>
+    </form>
 </body>
-
-<div class="main">FIX</div>
-<footer class="footer-distributed">
-    <div class="footer-left">
-        <h3>Solitarie<span>Informática</span></h3>
-
-        <p class="footer-links">
-            <a href="inicio.html">Início</a>
-            ·
-            <a href="formulario.html">Formulário</a>
-            ·
-            <a href="cadastro.html">Cadastro</a>
-        </p>
-
-        <p class="footer-company-name">Solitarie - João Vitor Nicolette - Eric Carmona Barroquelo &copy; 2019</p>
-    </div>
-
-    <div class="footer-center">
-        <div>
-            <i class="fa fa-map-marker"></i>
-            <p><span>R. Frei Galvão</span> Jaú, SP</p>
-        </div>
-
-        <div>
-            <i class="fa fa-phone"></i>
-            <p>+55 14 123456789</p>
-        </div>
-
-        <div>
-            <i class="fa fa-envelope"></i>
-            <p><a href="mailto:support@company.com">contact@solitarie.com</a></p>
-        </div>
-    </div>
-
-    <div class="footer-right">
-
-        <p class="footer-company-about">
-            <span>About the company</span>
-        </p>
-
-        <div class="footer-icons">
-            <a href="#"><i class="fa fa-facebook"><img src="../images/icons8-facebook-32.png"></i></a>
-            <a href="#"><i class="fa fa-twitter"><img src="../images/icons8-twitter-32.png"></i></a>
-            <a href="#"><i class="fa fa-linkedin"><img src="../images/icons8-linkedin-32.png"></i></a>
-            <a href="#"><i class="fa fa-github"><img src="../images/icons8-github-32.png"></i></a>
-        </div>
-    </div>
-</footer>
-
 </html>
