@@ -9,21 +9,24 @@
 
 <body>
     <div class="nav">
-        <ul>
-            <a href="inicio.html"><img src="../images/thumbnail_Logo Solitarie.png"></a>
-            <input id="pesq" type="search" placeholder="PESQUISAR" q="googlesearch">
-            <button id="lupa"><img src="../images/lupa.png"></button>
+        <form method="POST" action="../php/pesquisa.php">
+            <ul>
+                <a href="inicio.html"><img src="../images/thumbnail_Logo Solitarie.png"></a>
+                <input id="pesq" type="search" placeholder="PESQUISAR" q="googlesearch">
+                <input type="submit" id="lupa" value="PESQ"></input>
 
-            <div class="dropdown">
-                <button class="dropbtn"><a href="#">Traduzir</a></button>
-                <div class="dropdown-content">
-                    <a href="../enUS/login.html">EN-US</a>
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="#">Traduzir</a></button>
+                    <div class="dropdown-content">
+                        <a href="../enUS/login.html">EN-US</a>
+                    </div>
                 </div>
-            </div>
-            <li><a id="ativado" href="entrar.html">Login</a></li>
-            <li><a href="cadastro.html">Cadastro</a></li>
-            <li><a href="formulario.html">Formulário</a></li>
-        </ul>
+                <li><a id="ativado" href="entrar.html">Login</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="../php/formulario.php">Formulário</a></li>
+                <li><a href="../php/logout.php">Sair</a></li>
+            </ul>
+        </form>
     </div>
 
     <div class="sidebar">
@@ -41,13 +44,13 @@
         </ul>
     </div>
 
-    <form method="POST" action="php/login.php" class="boxform" accept-charset="UTF-8">
+    <form method="POST" action="../php/login.php" class="boxform" accept-charset="UTF-8">
         <h1>login cliente</h1>
-        <input placeholder="Email" type="Email" name="Email" required="true" maxlength="100" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="exemple@exemple.com">
-        <input placeholder="Senha" type="password" size="20" name="Senha" required = "true">
+        <input placeholder="Email" type="Email" name="email" required="true" maxlength="100" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="exemple@exemple.com">
+        <input placeholder="Senha" type="password" size="20" name="senha" required = "true">
         <input type="submit" value="ENTRAR" name="entrar">
         <input type="reset" value="LIMPAR">
-        <h4><a href="index.html">Esqueceu a senha ?</a></h4>
+        <h4><a href="#">Esqueceu a senha ?</a></h4>
         <h4><a href="cadastro.html">Não tem um cadastro ?</h4>
     </form>
 </body>
