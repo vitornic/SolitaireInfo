@@ -30,8 +30,8 @@ $con        = $conexao->query($consulta) or die($conexao->error);
                         <a href="../enUS/login.html">EN-US</a>
                     </div>
                 </div>
-                <li><a id="ativado" href="entrar.html">Login</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="../ptBR/entrar.html">Login</a></li>
+                <li><a href="../ptBR/cadastro.html">Cadastro</a></li>
                 <li><a href="../php/formulario.php">Formulário</a></li>
                 <li><a href="../php/logout.php">Sair</a></li>
             </ul>
@@ -79,6 +79,64 @@ $con        = $conexao->query($consulta) or die($conexao->error);
 EOD;
 }
 ?>
+
+<?php
+        include '../inc/conecta_mysql.inc';
+
+        if(count($_POST) > 0) {
+
+            
+
+            $desc = trim($_POST['pesq']);
+
+            $sql = "SELECT * FROM produto WHERE nome LIKE '%".$desc."%' OR descricao LIKE '%".$desc."%'";
+
+            $rs = mysqli_query($conexao, $sql) or die('Erro de Consulta');
+            die();
+            $total = mysqli_num_rows($rs);
+
+            
+
+            echo "<center><span style='color:#ff0000'>TOTAL DE REGISTROS: ".$total."</span></center>";
+
+            echo "<center>";
+            echo "<table border = 1>
+                    <tr>
+                        <td>FOTO</td>
+                        <td>CODIGO</td>
+                        <td>NOME</td>
+                        <td>DESCRICAO</td>
+                        <td>VALOR</td>
+                        <td>CODIGO TIPO</td>
+                    </tr>";
+
+            while ($linha = mysqli_fetch_assoc($rs)) {
+                $codProd = $linha['codigo'];
+                $nomeProd = $linha['nome'];
+                $descProd = $linha['descricao'];
+                $P_Venda   = $linha['PVenda'];
+                $fotoProd = $linha['fotoProd'];
+                $codForne  = $linha['fornecedor'];
+                $tipoProd = $linha['codtipo'];
+                
+                echo "<tr>
+                        <td><img src='imagens/$fotoProd' width='100px' height='100px'></td>
+                        <td>".$codProd."</td>
+                        <td>".$nomeProd."</td>
+                        <td>".$descProd."</td>
+                        <td>".$P_Venda."</td>
+                        <td>".$fotoProd."</td>
+                        <td>".$codForne."</td>
+                        <td>".$tipoProd."</td>
+                    </tr>";
+                echo "</center>";
+            }
+
+            echo "</table>";
+            mysqli_free_result($rs);
+            mysqli_close($conexao);
+        }
+    ?>
 
 </div>
 </html>
