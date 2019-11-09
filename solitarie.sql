@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 09-Nov-2019 às 17:01
+-- Tempo de geração: 09-Nov-2019 às 17:34
 -- Versão do servidor: 10.4.8-MariaDB
 -- versão do PHP: 7.3.11
 
@@ -33,8 +33,7 @@ CREATE TABLE `clientes` (
   `nome` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `senha` varchar(64) NOT NULL,
-  `telefone` tinyint(13) NOT NULL,
-  `codVendas` bigint(20) NOT NULL
+  `telefone` tinyint(13) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -87,7 +86,8 @@ CREATE TABLE `vendas` (
   `codigo` bigint(20) NOT NULL,
   `data` date NOT NULL,
   `valor` decimal(8,2) NOT NULL,
-  `codProd` bigint(20) NOT NULL
+  `codProd` bigint(20) NOT NULL,
+  `codCliente` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -98,8 +98,7 @@ CREATE TABLE `vendas` (
 -- Índices para tabela `clientes`
 --
 ALTER TABLE `clientes`
-  ADD PRIMARY KEY (`codigo`),
-  ADD KEY `codVendas` (`codVendas`);
+  ADD PRIMARY KEY (`codigo`);
 
 --
 -- Índices para tabela `fornecedores`
@@ -126,7 +125,8 @@ ALTER TABLE `tipoprod`
 --
 ALTER TABLE `vendas`
   ADD PRIMARY KEY (`codigo`),
-  ADD KEY `codProd` (`codProd`);
+  ADD KEY `codProd` (`codProd`),
+  ADD KEY `codCliente` (`codCliente`);
 
 --
 -- AUTO_INCREMENT de tabelas despejadas
@@ -167,12 +167,6 @@ ALTER TABLE `vendas`
 --
 
 --
--- Limitadores para a tabela `clientes`
---
-ALTER TABLE `clientes`
-  ADD CONSTRAINT `clientes_ibfk_1` FOREIGN KEY (`codVendas`) REFERENCES `vendas` (`codigo`);
-
---
 -- Limitadores para a tabela `produtos`
 --
 ALTER TABLE `produtos`
@@ -183,7 +177,9 @@ ALTER TABLE `produtos`
 -- Limitadores para a tabela `vendas`
 --
 ALTER TABLE `vendas`
-  ADD CONSTRAINT `vendas_ibfk_1` FOREIGN KEY (`codProd`) REFERENCES `produtos` (`codigo`);
+  ADD CONSTRAINT `vendas_ibfk_1` FOREIGN KEY (`codProd`) REFERENCES `produtos` (`codigo`),
+  ADD CONSTRAINT `vendas_ibfk_2` FOREIGN KEY (`codCliente`) REFERENCES `clientes` (`codigo`),
+  ADD CONSTRAINT `vendas_ibfk_3` FOREIGN KEY (`codCliente`) REFERENCES `clientes` (`codigo`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
