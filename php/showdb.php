@@ -16,7 +16,7 @@ $con        = $conexao->query($consulta) or die($conexao->error);
   <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
   <div  class="custom-padding">
 		<nav>
-			<div href="index.html" class="logo"><a href="../index.html">Pan!c Button</a></div>
+			<div href="index.html" class="logo"><a href="../index.html">Solitarie</a></div>
 			<div>
 				<ul class="menu-area">
 				<li>

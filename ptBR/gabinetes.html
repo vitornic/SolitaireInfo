@@ -10,21 +10,24 @@
 
 <body>
     <div class="nav">
-        <ul>
-            <a href="inicio.html"><img src="../images/thumbnail_Logo Solitarie.png"></a>
-            <input id="pesq" type="search" placeholder="PESQUISAR" q="googlesearch">
-            <button id="lupa"><img src="../images/lupa.png"></button>
-    
-            <div class="dropdown">
-                <button class="dropbtn"><a href="#">Traduzir</a></button>
-                <div class="dropdown-content">
-                    <a href="../enUS/cabinets.html">EN-US</a>
+        <form method="POST" action="pesquisa.php">
+            <ul>
+                <a href="inicio.html"><img src="../images/thumbnail_Logo Solitarie.png"></a>
+                <input name="pesq" id="pesq" type="text" placeholder="PESQUISAR">
+                <input type="submit" id="lupa" value="      "></input>
+
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="#">Traduzir</a></button>
+                    <div class="dropdown-content">
+                        <a href="../enUS/cabinets.html">EN-US</a>
+                    </div>
                 </div>
-            </div>
-            <li><a href="entrar.html">Login</a></li>
-            <li><a href="cadastro.html">Cadastro</a></li>
-            <li><a href="formulario.html">Formulário</a></li>
-        </ul>
+                <li><a href="logout.php">Sair</a></li>
+                <li><a href="entrar.php">Login</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="formulario.php">Formulário</a></li>
+            </ul>
+        </form>
     </div>
     
     
@@ -35,12 +38,13 @@
             <li><a href="perifericos.html">Periféricos</a></li>
             <li><a href="acessorios.html">Acessórios</a></li>
             <li><a href="jogos.html">Jogos</a></li>
-            <li><a href="hardware.html">Hardware</a></li>
+            <li><a href="hardware.html">Armazenamento</a></li>
             <li><a href="video.html">Vídeo</a></li>
             <li><a href="audio.html">Áudio</a></li>
             <li><a id="ativado" href="gabinetes.html">Gabinetes</a></li>
             <li><a href="redes.html">Redes</a></li>
-            <li><a href="cadastrodeproduto.html">Cadastro de Produto</a></li>
+            <li id="nSel"><br><br></li>
+            <li><a href="cadastrodeproduto.php">Cadastro de Produto</a></li>
         </ul>
     </div>
 
@@ -57,10 +61,10 @@
                 <li><strong>tamanho</strong> 46CM(A) x 41,9CM(C) x 20,4CM(L)</li>
                 <div class="border"></div>
                 <li><strong>cor</strong> preta com tampas de vidro</li>
-                </ul>
-                <a href="#">Adquira Já</a>
-            </div>
+            </ul>
+            <a href="#">Adquira Já</a>
         </div>
     </div>
+</div>
 </body>
 </html>
