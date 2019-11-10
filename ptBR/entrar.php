@@ -42,7 +42,7 @@
             <li><a href="Gabinetes.html">Gabinetes</a></li>
             <li><a href="Redes.html">Redes</a></li>
             <li id="nSel"><br><br></li>
-            <li><a href="cadastrodeproduto.html">Cadastro de Produto</a></li>
+            <li><a href="cadastrodeproduto.php">Cadastro de Produto</a></li>
         </ul>
     </div>
 

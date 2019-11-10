@@ -51,7 +51,7 @@ $con        = $conexao->query($consulta) or die($conexao->error);
             <li><a href="../ptBR/gabinetes.html">Gabinetes</a></li>
             <li><a href="../ptBR/redes.html">Redes</a></li>
             <li id="nSel"><br><br></li>
-            <li><a href="cadastrodeproduto.html">Cadastro de Produto</a></li>
+            <li><a href="cadastrodeproduto.php">Cadastro de Produto</a></li>
         </ul>
     </div>
 
