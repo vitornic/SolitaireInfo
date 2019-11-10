@@ -64,8 +64,10 @@
     @$login_cookie = $_COOKIE['Email'];
     if(isset($login_cookie)){
         echo"<br>";
+        echo "<div class='boxform'>";
         echo"Bem-Vindo, ".$login_cookie." <br>";
-        echo"Você já está logado";
+        echo"Você já está <font color='green'>LOGADO</font>";
+        echo "</div>";
     } else {
         echo "<br>";
         echo "<form method='POST' action='login.php' class='boxform' accept-charset='UTF-8'>

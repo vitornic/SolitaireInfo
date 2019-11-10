@@ -59,8 +59,10 @@ $con        = $conexao->query($consulta) or die($conexao->error);
     @$login_cookie = $_COOKIE['Email'];
     if(isset($login_cookie)){
         echo"<br>";
+        echo "<div class='boxmensagem'>";
         echo"Bem-Vindo, ".$login_cookie." <br>";
         echo"Essas informações <font color='green'>PODEM</font> ser acessadas por você";
+        echo "</div>";
         echo"
 
         <div>

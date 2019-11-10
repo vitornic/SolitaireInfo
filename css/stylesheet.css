@@ -491,15 +491,29 @@ table {
     color: fff;
   }
 
-  /* fim tabela */
+/* fim tabela */
 
-  /* ------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------- */
 
-  /* Impede uma área de ser selecionada */
-  #nSel {
-    user-select: none;
-  }
+/* Impede uma área de ser selecionada */
+#nSel {
+  user-select: none;
+}
 
-  /* Fim ? */
+/* Fim ? */
 
-  /* ------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------- */
+
+/* Mensagens de Login */
+
+.boxmensagem {
+  background-color: lightgray;
+  text-align: center;
+  width: 50vh;
+  height: auto;
+  position: static;
+  margin-left: 45vh;
+  margin-top: -2vh;
+}
+
+/* Fim das Mensagens de Login*/

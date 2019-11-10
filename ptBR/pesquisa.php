@@ -75,8 +75,10 @@ echo "<script>console.log(`$consulta`)</script>";
   			@$login_cookie = $_COOKIE['Email'];
     			if(isset($login_cookie)){
     			    echo"<br>";
+                    echo "<div class='boxmensagem'>";
     			    echo"Bem-Vindo, $login_cookie <br>";
 				    echo"Essas informações <font color='green'>PODEM</font> ser acessadas por você";
+                    echo "</div>";
                     include '../inc/conecta_mysql.inc';
                 	include '../inc/showpesq.inc';
                     } else {
@@ -86,15 +88,10 @@ echo "<script>console.log(`$consulta`)</script>";
     			        <?php
         				    echo"Bem-Vindo, convidado <br>
         				    Essas informações <font color='red'>NÃO PODEM</font> ser acessadas por você
-        				    <br><a href='../ptBR/login.php'>Faça Login</a> Para ler o conteúdo
+        				    <br><a href='../ptBR/entrar.php'>Faça Login</a> Para ler o conteúdo
 				    </div>
 EOD;
 }
 ?>
-
-
-
 </div>
 </html>
-
-

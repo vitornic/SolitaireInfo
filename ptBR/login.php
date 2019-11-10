@@ -10,10 +10,19 @@
 
 <?php
     include '../inc/conecta_mysql.inc';
-    
-    $Email   = $_POST['email'];
-    $entrar  = $_POST['entrar'];
-    $Senha   = $_POST['senha'];
+
+    if(isset($_POST['email'])) {
+        $Email   = $_POST['email'];
+    }
+
+    if(isset($_POST['senha'])) {
+        $Senha   = $_POST['senha'];
+    }
+
+    if(isset($_POST['entrar'])) {
+        $entrar  = $_POST['entrar'];
+    }
+
     $continua = 0;
 
     if (isset($entrar)) {
