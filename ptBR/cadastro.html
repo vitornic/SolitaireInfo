@@ -9,22 +9,24 @@
 
 <body>
     <div class="nav">
-        <ul>
-            <a href="inicio.html"><img src="../images/thumbnail_Logo Solitarie.png"></a>
-            <input id="pesq" type="search" placeholder="PESQUISAR" q="googlesearch">
-            <button id="lupa"><img src="../images/lupa.png"></button>
+        <form method="POST" action="pesquisa.php">
+            <ul>
+                <a href="inicio.html"><img src="../images/thumbnail_Logo Solitarie.png"></a>
+                <input name="pesq" id="pesq" type="text" placeholder="PESQUISAR">
+                <input type="submit" id="lupa" value="      "></input>
 
-            <div class="dropdown">
-                <button class="dropbtn"><a href="#">Traduzir</a></button>
-                <div class="dropdown-content">
-                    <a href="../enUS/signup.html">EN-US</a>
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="#">Traduzir</a></button>
+                    <div class="dropdown-content">
+                        <a href="../enUS/signup.html">EN-US</a>
+                    </div>
                 </div>
-            </div>
-            <li><a href="../php/logout.php">Sair</a></li>
-            <li><a href="entrar.html">Login</a></li>
-            <li><a id="ativado" href="cadastro.html">Cadastro</a></li>
-            <li><a href="formulario.html">Formulário</a></li>
-        </ul>
+                <li><a href="logout.php">Sair</a></li>
+                <li><a href="entrar.php">Login</a></li>
+                <li><a id="ativado" href="cadastro.html">Cadastro</a></li>
+                <li><a href="formulario.php">Formulário</a></li>
+            </ul>
+        </form>
     </div>
 
     <div class="sidebar">
@@ -39,6 +41,7 @@
             <li><a href="audio.html">Áudio</a></li>
             <li><a href="gabinetes.html">Gabinetes</a></li>
             <li><a href="redes.html">Redes</a></li>
+            <li id="nSel"><br><br></li>
             <li><a href="cadastrodeproduto.html">Cadastro de Produto</a></li>
         </ul>
     </div>
@@ -52,7 +55,7 @@
         <input placeholder="Telefone" name="CTel" maxlength="11" type="text" pattern="[0-9]{2}[0-9]{9}$" required="true">
         <input type="submit" value="CADASTRAR" name="entrar">
         <input type="reset" value="LIMPAR">
-        <h4><a href="entrar.html">Já possui tem um cadastro ?</h4>
+        <h4><a href="entrar.php">Já possui tem um cadastro ?</h4>
     </form>
 </body>
 

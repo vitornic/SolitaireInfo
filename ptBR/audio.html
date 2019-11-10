@@ -10,22 +10,24 @@
 
 <body>
     <div class="nav">
-        <ul>
-            <a href="inicio.html"><img src="../images/thumbnail_Logo Solitarie.png"></a>
-            <input id="pesq" type="search" placeholder="PESQUISAR" q="googlesearch">
-            <button id="lupa"><img src="../images/lupa.png"></button>
-    
-            <div class="dropdown">
-                <button class="dropbtn"><a href="#">Traduzir</a></button>
-                <div class="dropdown-content">
-                    <a href="../enUS/audio.html">EN-US</a>
+        <form method="POST" action="pesquisa.php">
+            <ul>
+                <a href="inicio.html"><img src="../images/thumbnail_Logo Solitarie.png"></a>
+                <input name="pesq" id="pesq" type="text" placeholder="PESQUISAR">
+                <input type="submit" id="lupa" value="      "></input>
+
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="#">Traduzir</a></button>
+                    <div class="dropdown-content">
+                        <a href="../enUS/audio.html">EN-US</a>
+                    </div>
                 </div>
-            </div>
-            <li><a href="../php/logout.php">Sair</a></li>
-            <li><a href="entrar.html">Login</a></li>
-            <li><a href="cadastro.html">Cadastro</a></li>
-            <li><a href="formulario.html">Formulário</a></li>
-        </ul>
+                <li><a href="logout.php">Sair</a></li>
+                <li><a href="entrar.php">Login</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="formulario.php">Formulário</a></li>
+            </ul>
+        </form>
     </div>
     
     
@@ -41,6 +43,7 @@
             <li><a id="ativado" href="audio.html">Áudio</a></li>
             <li><a href="gabinetes.html">Gabinetes</a></li>
             <li><a href="redes.html">Redes</a></li>
+            <li id="nSel"><br><br></li>
             <li><a href="cadastrodeproduto.html">Cadastro de Produto</a></li>
         </ul>
     </div>

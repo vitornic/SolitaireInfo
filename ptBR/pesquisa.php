@@ -9,22 +9,22 @@
 
 <body>
     <div class="nav">
-        <form method="POST" action="pesquisa.php">
+        <form method="GET" action="pesquisa.php">
             <ul>
                 <a href="inicio.html"><img src="../images/thumbnail_Logo Solitarie.png"></a>
-                <input id="pesq" type="search" placeholder="PESQUISAR" q="googlesearch">
-                <input type="submit" id="lupa" value="PESQ"></input>
+                <input name="pesq" id="pesq" type="text" placeholder="PESQUISAR">
+                <input type="submit" id="lupa" value="      "></input>
 
                 <div class="dropdown">
                     <button class="dropbtn"><a href="#">Traduzir</a></button>
                     <div class="dropdown-content">
-                        <a href="../enUS/login.html">EN-US</a>
+                        <a href="../enUS/">EN-US</a>
                     </div>
                 </div>
                 <li><a href="logout.php">Sair</a></li>
-                <li><a href="../ptBR/entrar.html">Login</a></li>
-                <li><a href="../ptBR/cadastro.html">Cadastro</a></li>
-                <li><a href="../php/formulario.php">Formulário</a></li>
+                <li><a href="entrar.php">Login</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="formulario.php">Formulário</a></li>
             </ul>
         </form>
     </div>
@@ -51,7 +51,12 @@ header("Content-type: text/html; charset=utf-8");
 
 include '../inc/conecta_mysql.inc';
 
-@$desc     = $_POST['pesq'];
+if(isset($_GET['pesq'])) {
+    $desc = $_GET['pesq'];
+} else {
+    $desc     = $_POST['pesq'];
+}
+
 
 $consulta = "SELECT p.codigo, p.nome, p.descricao, p.P_Venda, p.fotoProd, t.nome, t.descricao FROM produtos as p join tipoprod as t on p.codTipo = t.codigo ";
 
@@ -81,7 +86,7 @@ echo "<script>console.log(`$consulta`)</script>";
     			        <?php
         				    echo"Bem-Vindo, convidado <br>
         				    Essas informações <font color='red'>NÃO PODEM</font> ser acessadas por você
-        				    <br><a href='../login.html'>Faça Login</a> Para ler o conteúdo
+        				    <br><a href='../ptBR/login.php'>Faça Login</a> Para ler o conteúdo
 				    </div>
 EOD;
 }

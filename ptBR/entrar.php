@@ -24,7 +24,7 @@
                 <li><a href="logout.php">Sair</a></li>
                 <li><a id="ativado" href="entrar.php">Login</a></li>
                 <li><a href="cadastro.html">Cadastro</a></li>
-                <li><a href="../php/formulario.php">Formulário</a></li>
+                <li><a href="formulario.php">Formulário</a></li>
             </ul>
         </form>
     </div>
@@ -41,6 +41,7 @@
             <li><a href="Áudio.html">Áudio</a></li>
             <li><a href="Gabinetes.html">Gabinetes</a></li>
             <li><a href="Redes.html">Redes</a></li>
+            <li id="nSel"><br><br></li>
             <li><a href="cadastrodeproduto.html">Cadastro de Produto</a></li>
         </ul>
     </div>

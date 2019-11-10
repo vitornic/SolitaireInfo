@@ -18,22 +18,24 @@ $con        = $conexao->query($consulta) or die($conexao->error);
 
 <body>
     <div class="nav">
-        <ul>
-            <a href="inicio.html"><img src="../images/thumbnail_Logo Solitarie.png"></a>
-            <input id="pesq" type="search" placeholder="PESQUISAR" q="googlesearch">
-            <button id="lupa"><img src="../images/lupa.png"></button>
+        <form method="POST" action="pesquisa.php">
+            <ul>
+                <a href="inicio.html"><img src="../images/thumbnail_Logo Solitarie.png"></a>
+                <input name="pesq" id="pesq" type="text" placeholder="PESQUISAR">
+                <input type="submit" id="lupa" value="      "></input>
 
-            <div class="dropdown">
-                <button class="dropbtn"><a href="#">Traduzir</a></button>
-                <div class="dropdown-content">
-                    <a href="../enUS/form.html">EN-US</a>
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="#">Traduzir</a></button>
+                    <div class="dropdown-content">
+                        <a href="../enUS/form.php">EN-US</a>
+                    </div>
                 </div>
-            </div>
-            <li><a href="logout.php">Sair</a></li>
-            <li><a href="../ptBR/entrar.html">Login</a></li>
-            <li><a href="../ptBR/cadastro.html">Cadastro</a></li>
-            <li><a id="ativado" href="formulario.php">Formulário</a></li>
-        </ul>
+                <li><a href="logout.php">Sair</a></li>
+                <li><a href="entrar.php">Login</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a id="ativado" href="formulario.php">Formulário</a></li>
+            </ul>
+        </form>
     </div>
 
     <div class="sidebar">
@@ -48,6 +50,8 @@ $con        = $conexao->query($consulta) or die($conexao->error);
             <li><a href="../ptBR/audio.html">Áudio</a></li>
             <li><a href="../ptBR/gabinetes.html">Gabinetes</a></li>
             <li><a href="../ptBR/redes.html">Redes</a></li>
+            <li id="nSel"><br><br></li>
+            <li><a href="cadastrodeproduto.html">Cadastro de Produto</a></li>
         </ul>
     </div>
 
@@ -67,13 +71,9 @@ $con        = $conexao->query($consulta) or die($conexao->error);
         echo "<div class = 'boxform'>
         Bem-Vindo, convidado <br>
         Essas informações <font color='red'>NÃO PODEM</font> <br> ser acessadas por você
-        <br><a href='entrar.html'>Faça Login</a>para ver o conteúdo
+        <br><a href='entrar.php'>Faça Login</a>para ver o conteúdo
         </div>"; }
     ?>
 </div>
-    
 </body>
-
-
 </html>
-
