@@ -1,5 +1,5 @@
+<!DOCTYPE>
 <html>
-
 <head>
     <link rel="icon" type="image/png" href="../images/fav.png">
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,33 +43,70 @@
         </ul>
     </div>
 
-    <form  method="POST" action="" class="boxform" accept-charset="UTF-8">
+    <form  method="POST" action="../php/verificaProduto.php" class="boxform" accept-charset="UTF-8">
         <h1>Cadastro de Produto</h1>
-        <input placeholder="Código do Produto" type="number" name="codigo">
-        <input placeholder="Nome do Produto" type="text" name="nome">
-        <input placeholder="Descrição do Produto" type="text" name="descricao">
-        <input placeholder="Valor do Produto" type="float" name="valor">
-        <input placeholder="Foto do Produto" type="text" name="foto">
-        <select name="tipo">
+        <input placeholder="Nome do Produto" type="text" name="PNome">
+        <input placeholder="Descrição do Produto" type="text" name="PDesc">
+        <input placeholder="Custo do Produto" type="float" name="PCusto">
+        <input placeholder="Preço de Venda" type="float" name="PVenda">
+        <input placeholder="Foto do Produto" type="text" name="PFoto">
+        <select name="PTipo">
+            <option disabled selected>TIPO</option>
             <?php
-                include 'inc/conecta_mysql.inc';
+                include '../inc/conecta_mysql.inc';
 
-                $sql = "SELECT codigo, descricao from tipoprod";
+                $sql = "SELECT codigo, descricao FROM tipoprod";
                 $rs = mysqli_query($conexao, $sql);
 
 
                 while ($row = mysqli_fetch_assoc($rs)) {
-                $cod = $row['codigo'];
-                $desc = $row['descricao'];
-                echo "<option value=$cod>$desc</option>";
-            }
+                    $cod = $row['codigo'];
+                    $desc = $row['descricao'];
+                    echo "<option value=$cod>$desc</option>";
+                }
             mysqli_close($conexao);
             ?>;
-    </select>
-    <br>
-    <input type="submit" value="CADASTRAR">
-    <input type="reset" value="LIMPAR">
-    <h4><a href="cadastrodetipo.html">Cadastrar um tipo de Produto</h4>
+        </select>
+        <select name="PForne">
+            <option disabled selected>FORNECEDOR</option>
+            <?php
+                include '../inc/conecta_mysql.inc';
+
+                $sql = "SELECT codigo, nome FROM fornecedores";
+                $rs = mysqli_query($conexao, $sql);
+
+
+                while ($row = mysqli_fetch_assoc($rs)) {
+                    $cod = $row['codigo'];
+                    $nome = $row['nome'];
+                    echo "<option value=$cod>$nome</option>";
+                }
+            mysqli_close($conexao);
+            ?>;
+        </select>
+        <br>
+        <input type="submit" value="CADASTRAR">
+        <input type="reset" value="LIMPAR">
+        <h4><a href="cadastrodetipo.html">Cadastrar um tipo de Produto</h4>
     </form>
 </body>
 </html>
+
+<?php
+# pagina principal
+session_start();
+
+if(isset($_GET['redirect']) && !is_numeric($_GET['redirect'])){
+    $_SESSION['msg'] = "<center><span style='color:#008000'>DADOS INSERIDOS COM SUCESSO !!!</span></center>";
+    header("Location: redirect.php");
+} elseif(isset($_GET['redirect']) && is_numeric($_GET['redirect'])) {
+    $_SESSION['msg'] = 'Erro';
+    header("Location: redirect.php");
+}
+#capturar mensagem
+if(isset($_SESSION['msg']) && !empty($_SESSION['msg'])){
+    //print "<script>alert(\"{$_SESSION['msg']}\")</script>";
+    echo $_SESSION['msg'];
+}
+
+?>
