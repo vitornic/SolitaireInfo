@@ -87,7 +87,7 @@ body {
   -webkit-box-shadow:0 3px 10px 0 #ccc; 
 }
 
-.nav li  ul{
+.nav li ul {
 position:absolute; 
 top:25px; 
 left:0;
@@ -131,7 +131,7 @@ display:none;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  height: 54%;
+  height: 80%;
   width: 100%;
   background-color: #e67e22;
 
