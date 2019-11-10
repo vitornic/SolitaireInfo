@@ -43,7 +43,7 @@
         </ul>
     </div>
 
-    <form  method="POST" action="../php/verificaProduto.php" class="boxform" accept-charset="UTF-8">
+    <form method="POST" action="../php/verificaProduto.php" class="boxform" accept-charset="UTF-8" autocomplete="off">
         <h1>Cadastro de Produto</h1>
         <input placeholder="Nome do Produto" type="text" name="PNome">
         <input placeholder="Descrição do Produto" type="text" name="PDesc">
@@ -85,28 +85,9 @@
             ?>;
         </select>
         <br>
-        <input type="submit" value="CADASTRAR">
+        <input type="submit" value="CADASTRAR" id="enviar">
         <input type="reset" value="LIMPAR">
         <h4><a href="cadastrodetipo.html">Cadastrar um tipo de Produto</h4>
     </form>
 </body>
 </html>
-
-<?php
-# pagina principal
-session_start();
-
-if(isset($_GET['redirect']) && !is_numeric($_GET['redirect'])){
-    $_SESSION['msg'] = "<center><span style='color:#008000'>DADOS INSERIDOS COM SUCESSO !!!</span></center>";
-    header("Location: redirect.php");
-} elseif(isset($_GET['redirect']) && is_numeric($_GET['redirect'])) {
-    $_SESSION['msg'] = 'Erro';
-    header("Location: redirect.php");
-}
-#capturar mensagem
-if(isset($_SESSION['msg']) && !empty($_SESSION['msg'])){
-    //print "<script>alert(\"{$_SESSION['msg']}\")</script>";
-    echo $_SESSION['msg'];
-}
-
-?>
