@@ -692,7 +692,7 @@ footer{
   text-align: center;
 }
 
-.boxform input[type = "email"], input[type = "password"], input[type = "text"] {
+.boxform input[type = "email"], input[type = "password"], input[type = "text"], input[type = 'number'], input[type = 'float'] {
   border: 0;
   background: none;
   display: block;
