@@ -45,6 +45,8 @@
         </ul>
     </div>
 
+    
+    <!--
     <form method="POST" action="../php/login.php" class="boxform" accept-charset="UTF-8">
         <h1>login cliente</h1>
         <input placeholder="Email" type="Email" name="email" required="true" maxlength="100" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="exemple@exemple.com">
@@ -53,6 +55,26 @@
         <input type="reset" value="LIMPAR">
         <h4><a href="#">Esqueceu a senha ?</a></h4>
         <h4><a href="cadastro.html">Não tem um cadastro ?</h4>
-        </form>
+    </form> -->
     </body>
 </html>
+
+<?php
+    @$login_cookie = $_COOKIE['Email'];
+    if(isset($login_cookie)){
+        echo"<br>";
+        echo"Bem-Vindo, ".$login_cookie." <br>";
+        echo"Você já está logado";
+    } else {
+        echo "<br>";
+        echo "<form method='POST' action='login.php' class='boxform' accept-charset='UTF-8'>
+                <h1>login cliente</h1>
+                <input placeholder='Email' type='Email' name='email' required='true' maxlength='100' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$' title='exemple@exemple.com'>
+                <input placeholder='Senha' type='password' size='20' name='senha' required = 'true'>
+                <input type='submit' value='ENTRAR' name='entrar'>
+                <input type='reset' value='LIMPAR'>
+                <h4><a href='#'>Esqueceu a senha ?</a></h4>
+                <h4><a href='cadastro.html'>Não tem um cadastro ?</h4>
+            </form>";
+    }
+    ?>
