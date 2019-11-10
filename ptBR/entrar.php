@@ -9,10 +9,10 @@
 
 <body>
     <div class="nav">
-        <form method="POST" action="../php/pesquisa.php">
+        <form method="POST" action="pesquisa.php">
             <ul>
                 <a href="inicio.html"><img src="../images/thumbnail_Logo Solitarie.png"></a>
-                <input id="pesq" type="search" placeholder="PESQUISAR" q="googlesearch">
+                <input name="pesq" id="pesq" type="text" placeholder="PESQUISAR">
                 <input type="submit" id="lupa" value="PESQ"></input>
 
                 <div class="dropdown">
@@ -21,8 +21,8 @@
                         <a href="../enUS/login.html">EN-US</a>
                     </div>
                 </div>
-                <li><a href="../php/logout.php">Sair</a></li>
-                <li><a id="ativado" href="entrar.html">Login</a></li>
+                <li><a href="logout.php">Sair</a></li>
+                <li><a id="ativado" href="entrar.php">Login</a></li>
                 <li><a href="cadastro.html">Cadastro</a></li>
                 <li><a href="../php/formulario.php">Formulário</a></li>
             </ul>

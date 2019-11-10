@@ -767,17 +767,17 @@ footer{
 /* Tabela */
 
 table {
-  border: 1px solid black;
-  border-collapse: collapse;
-  text-align: center;
-  color: inherit;
-  background-color: white;
-  width: 400px;
-  height: 200px;
-}
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    color: inherit;
+    background-color: white;
+    width: 400px;
+    height: 200px;
+  }
 
-tr:nth-child(even) {
-  background-color: #edf5ff; }
+  tr:nth-child(even) {
+    background-color: #edf5ff; }
 
   tr:hover {
     background-color: rgb(0, 174, 255);

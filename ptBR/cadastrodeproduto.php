@@ -43,7 +43,7 @@
         </ul>
     </div>
 
-    <form method="POST" action="../php/verificaProduto.php" class="boxform" accept-charset="UTF-8" autocomplete="off">
+    <form method="POST" action="../php/verificaProduto.php" class="boxform" accept-charset="UTF-8">
         <h1>Cadastro de Produto</h1>
         <input placeholder="Nome do Produto" type="text" name="PNome">
         <input placeholder="Descrição do Produto" type="text" name="PDesc">

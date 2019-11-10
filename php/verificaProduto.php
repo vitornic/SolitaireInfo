@@ -37,7 +37,7 @@
 		$sr = $conexao->query($sql) or die("<p uk-margin>
 	    <script type='text/javascript'>
 	           UIkit.modal.alert('ERRO DE INCLUSÃO !!!').then(function() {
-				    history.go(-1)
+				    window.location.replace('../ptBR/cadastrodeproduto.php');
 				})
 	           blur()
 	    </script>
@@ -46,7 +46,7 @@
 		echo "<p uk-margin>
 	    <script type='text/javascript'>
 	        	UIkit.modal.alert('DADOS INSERIDOS COM SUCESSO !!!').then(function() {
-	        		history.go(-1)
+	        		window.location.replace('../ptBR/cadastrodeproduto.php');
 				})
 	           blur()
 	    </script>
