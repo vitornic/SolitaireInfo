@@ -88,11 +88,11 @@ body {
 }
 
 .nav li ul {
-position:absolute; 
-top:25px; 
-left:0;
-background-color:#fff; 
-display:none;
+  position:absolute; 
+  top:25px; 
+  left:0;
+  background-color:#fff; 
+  display:none;
 } 
 
 .nav li:hover ul, .menu li.over ul{display:block;}
@@ -146,11 +146,11 @@ display:none;
 }
 
 .sidebar li a:hover{
-background:#d35400; 
-color:#fff; 
--moz-box-shadow:0 3px 5px 0 #CCC; 
--webkit-box-shadow:0 3px 10px 0 #ccc; 
-text-shadow:0px 0px 5px #fff; 
+  background:#d35400; 
+  color:#fff; 
+  -moz-box-shadow:0 3px 5px 0 #CCC; 
+  -webkit-box-shadow:0 3px 10px 0 #ccc; 
+  text-shadow:0px 0px 5px #fff; 
 }
 
 .sidebar strong {
@@ -320,30 +320,30 @@ img {
 }
 
 .formulario input[type = 'submit'] {
-border:1px solid #25692A;
-border-radius:24px;
-display:inline-block;
-cursor:pointer;
-font-family:Verdana;
-font-weight:bold;
-font-size:13px;
-padding:6px 6px;
-text-decoration:none;
-margin: 7 30;
+  border:1px solid #25692A;
+  border-radius:24px;
+  display:inline-block;
+  cursor:pointer;
+  font-family:Verdana;
+  font-weight:bold;
+  font-size:13px;
+  padding:6px 6px;
+  text-decoration:none;
+  margin: 7 30;
 }
 
 .formulario input[type = 'reset'] {
-border:1px solid #25692A;
-border-radius:24px;
-display:inline-block;
-cursor:pointer;
-font-family:Verdana;
-font-weight:bold;
-font-size:13px;
-padding:6px 6px;
-text-decoration:none;
-margin-top: 7 ;
-margin-left: 60px;
+  border:1px solid #25692A;
+  border-radius:24px;
+  display:inline-block;
+  cursor:pointer;
+  font-family:Verdana;
+  font-weight:bold;
+  font-size:13px;
+  padding:6px 6px;
+  text-decoration:none;
+  margin-top: 7 ;
+  margin-left: 60px;
 }
 
 .formulario {
@@ -369,30 +369,30 @@ margin-left: 60px;
 }
 
 .cadastro input[type = 'submit'] {
-border:1px solid #25692A;
-border-radius:24px;
-display:inline-block;
-cursor:pointer;
-font-family:Verdana;
-font-weight:bold;
-font-size:13px;
-padding:6px 6px;
-text-decoration:none;
-margin: 7 30;
+  border:1px solid #25692A;
+  border-radius:24px;
+  display:inline-block;
+  cursor:pointer;
+  font-family:Verdana;
+  font-weight:bold;
+  font-size:13px;
+  padding:6px 6px;
+  text-decoration:none;
+  margin: 7 30;
 }
 
 .cadastro input[type = 'reset'] {
-border:1px solid #25692A;
-border-radius:24px;
-display:inline-block;
-cursor:pointer;
-font-family:Verdana;
-font-weight:bold;
-font-size:13px;
-padding:6px 6px;
-text-decoration:none;
-margin-top: 7 ;
-margin-left: 60px;
+  border:1px solid #25692A;
+  border-radius:24px;
+  display:inline-block;
+  cursor:pointer;
+  font-family:Verdana;
+  font-weight:bold;
+  font-size:13px;
+  padding:6px 6px;
+  text-decoration:none;
+  margin-top: 7 ;
+  margin-left: 60px;
 }
 
 .cadastro {
@@ -425,30 +425,30 @@ margin-left: 60px;
 }
 
 .login input[type = 'submit'] {
-border:1px solid #25692A;
-border-radius:24px;
-display:inline-block;
-cursor:pointer;
-font-family:Verdana;
-font-weight:bold;
-font-size:13px;
-padding:6px 6px;
-text-decoration:none;
-margin: 7 30;
+  border:1px solid #25692A;
+  border-radius:24px;
+  display:inline-block;
+  cursor:pointer;
+  font-family:Verdana;
+  font-weight:bold;
+  font-size:13px;
+  padding:6px 6px;
+  text-decoration:none;
+  margin: 7 30;
 }
 
 .login input[type = 'reset'] {
-border:1px solid #25692A;
-border-radius:24px;
-display:inline-block;
-cursor:pointer;
-font-family:Verdana;
-font-weight:bold;
-font-size:13px;
-padding:6px 6px;
-text-decoration:none;
-margin-top: 7 ;
-margin-left: 60px;
+  border:1px solid #25692A;
+  border-radius:24px;
+  display:inline-block;
+  cursor:pointer;
+  font-family:Verdana;
+  font-weight:bold;
+  font-size:13px;
+  padding:6px 6px;
+  text-decoration:none;
+  margin-top: 7 ;
+  margin-left: 60px;
 }
 
 .login {
@@ -639,7 +639,7 @@ footer{
 
   .footer-distributed{
     font: bold 14px sans-serif;
-  
+    
   }
 
   .footer-distributed .footer-left,
@@ -766,18 +766,18 @@ footer{
 
 /* Tabela */
 
-  table {
-    border: 1px solid black;
-    border-collapse: collapse;
-    text-align: center;
-    color: inherit;
-    background-color: white;
-    width: 400px;
-    height: 200px;
-  }
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  color: inherit;
+  background-color: white;
+  width: 400px;
+  height: 200px;
+}
 
-  tr:nth-child(even) {
-    background-color: #edf5ff; }
+tr:nth-child(even) {
+  background-color: #edf5ff; }
 
   tr:hover {
     background-color: rgb(0, 174, 255);
@@ -785,3 +785,9 @@ footer{
   }
 
   /* fim tabela */
+
+
+  /* Impede uma área de ser selecionada */
+  #nSel {
+    user-select: none;
+  }

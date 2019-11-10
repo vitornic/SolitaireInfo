@@ -30,10 +30,10 @@ $con        = $conexao->query($consulta) or die($conexao->error);
                         <a href="../enUS/login.html">EN-US</a>
                     </div>
                 </div>
+                <li><a href="logout.php">Sair</a></li>
                 <li><a href="../ptBR/entrar.html">Login</a></li>
                 <li><a href="../ptBR/cadastro.html">Cadastro</a></li>
                 <li><a href="../php/formulario.php">Formulário</a></li>
-                <li><a href="../php/logout.php">Sair</a></li>
             </ul>
         </form>
     </div>
