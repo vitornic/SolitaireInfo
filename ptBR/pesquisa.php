@@ -61,7 +61,8 @@ $consulta = "SELECT p.codigo, p.nome, p.descricao, p.P_Venda, p.fotoProd, t.nome
     $con        = $conexao->query($consulta) or die($conexao->error);
 
 
-echo $consulta;
+echo "<script>console.log(`$consulta`)</script>"; 
+//Exibe o SELECT SQL no console navegador (F12 Google Chrome,Ctrl+Shift+I em outros navegadores)
 ?>
 
 <div>
