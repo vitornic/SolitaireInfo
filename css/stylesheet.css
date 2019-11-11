@@ -218,8 +218,8 @@ body {
 .boxi img {
   float: right;
   margin: auto;
-  width: 167.55vh;
-  height: 68.75vh;
+  width: 81.6%;
+  height: auto;
   /*height: auto;*/
   user-select: none;
 }
