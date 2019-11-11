@@ -41,19 +41,24 @@ body {
   display: inline-block;
 }
 
+.dropbtn:hover {
+  background-color: #d35400;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #e67e22;
-  min-width: 80px;
+  /*min-width: 80px;*/
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  margin-left: 15px;
+  margin-left: 2vh;
   z-index: 1;
 }
 
 .dropdown-content a {
   color: white;
-  padding: 12px 16px;
+  /*padding: 12px 21px;*/
+  padding: 0.5vh 3.50vh;
   text-decoration: none;
   display: block;
 }
@@ -93,8 +98,8 @@ body {
 .nav li a:hover {
   background-color: #d35400;
 
-  -moz-box-shadow:0 5px 5px 0 #CCC; 
-  -webkit-box-shadow:0 3px 10px 0 #ccc; 
+  box-shadow:0 5px 5px 0 #CCC; 
+  -webkit-box-shadow:0 3px 10px 0 #ccc;
 }
 
 .nav li ul {
@@ -125,14 +130,13 @@ body {
 }
 
 .nav input[type="submit"] { /* Botão Pesquisar | Lupa */
-  /*padding: 9px 10px 15px 20px;*/
   padding: 14px 20px;
   margin: 6px -6px;
 
   background: none;
   text-align: center;
   border: 2px solid #d35400;
-  color: black;
+  background-color: white;
   border-radius: 24px;
   transition: 0.25s;
   cursor: pointer;
@@ -142,7 +146,7 @@ body {
 }
 
 .nav input[type="submit"]:hover {
-  background-color: #d35400;
+  background-color: #bdc3c7;
 }
 
 .nav {  /* Impede do Menu ser selecionado */
@@ -189,7 +193,7 @@ body {
 .sidebar li a:hover{
   background:#d35400; 
   color:#fff; 
-  -moz-box-shadow:0 3px 5px 0 #CCC; 
+  box-shadow:0 3px 5px 0 #CCC; 
   -webkit-box-shadow:0 3px 10px 0 #ccc; 
   text-shadow:0px 0px 5px #fff; 
 }
