@@ -13,7 +13,7 @@
             <ul>
                 <a href="inicio.html"><img src="../images/thumbnail_Logo Solitarie.png"></a>
                 <input name="pesq" id="pesq" type="text" placeholder="PESQUISAR">
-                <input type="submit" id="lupa" value="      "></input>
+                <input type="submit" id="lupa" value="      ">
 
                 <div class="dropdown">
                     <button class="dropbtn"><a href="#">Traduzir</a></button>
