@@ -21,9 +21,16 @@
                         <a href="../enUS/home.html">EN-US</a>
                     </div>
                 </div>
-                <li><a href="logout.php">Sair</a></li>
-                <li><a href="entrar.php">Login</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li>
+                <?php
+                    if(isset($_COOKIE["Nome"])) {
+                        $login_cookie = $_COOKIE['Nome'];
+                        echo "<li><a href='logout.php'>Sair</a></li>";
+                        echo "<li><a href='#'>Olá, $login_cookie</a></li>";
+                    } else {
+                        echo '<li><a href="entrar.php">Login</a></li>';
+                        echo '<li><a href="cadastro.html">Cadastro</a></li>';
+                    }
+                ?>
                 <li><a href="formulario.php">Formulário</a></li>
             </ul>
         </form>
