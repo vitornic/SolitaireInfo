@@ -20,7 +20,7 @@ $con        = $conexao->query($consulta) or die($conexao->error);
     <div class="nav">
         <form method="POST" action="pesquisa.php">
             <ul>
-                <a href="inicio.html"><img src="../images/thumbnail_Logo Solitarie.png"></a>
+                <a href="inicio.php"><img src="../images/thumbnail_Logo Solitarie.png"></a>
                 <input name="pesq" id="pesq" type="text" placeholder="PESQUISAR">
                 <input type="submit" id="lupa" value="      ">
 
