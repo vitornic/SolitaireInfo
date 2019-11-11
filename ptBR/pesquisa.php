@@ -1,4 +1,4 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
 <head>
     <link rel="icon" type="image/png" href="../images/fav.png">
