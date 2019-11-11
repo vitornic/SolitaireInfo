@@ -1,4 +1,4 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
 <head>
     <link rel="icon" type="image/png" href="../images/fav.png">
@@ -11,9 +11,9 @@
     <div class="nav">
         <form method="POST" action="pesquisa.php">
             <ul>
-                <a href="inicio.html"><img src="../images/thumbnail_Logo Solitarie.png"></a>
+                <a href="inicio.php"><img src="../images/thumbnail_Logo Solitarie.png"></a>
                 <input name="pesq" id="pesq" type="text" placeholder="PESQUISAR">
-                <input type="submit" id="lupa" value="      "></input>
+                <input type="submit" id="lupa" value="      ">
 
                 <div class="dropdown">
                     <button class="dropbtn"><a href="#">Traduzir</a></button>
@@ -32,15 +32,15 @@
     <div class="sidebar">
         <ul>
             <strong>CATEGORIAS</strong>
-            <li><a href="Computadores.html">Computadores</a></li>
-            <li><a href="Perifericos.html">Periféricos</a></li>
-            <li><a href="Acessorios.html">Acessórios</a></li>
-            <li><a href="Jogos.html">Jogos</a></li>
-            <li><a href="Hardware.html">Armazenamento</a></li>
-            <li><a href="Vídeo.html">Vídeo</a></li>
-            <li><a href="Áudio.html">Áudio</a></li>
-            <li><a href="Gabinetes.html">Gabinetes</a></li>
-            <li><a href="Redes.html">Redes</a></li>
+            <li><a href="computadores.html">Computadores</a></li>
+            <li><a href="perifericos.html">Periféricos</a></li>
+            <li><a href="acessorios.html">Acessórios</a></li>
+            <li><a href="jogos.html">Jogos</a></li>
+            <li><a href="hardware.html">Armazenamento</a></li>
+            <li><a href="video.html">Vídeo</a></li>
+            <li><a href="audio.html">Áudio</a></li>
+            <li><a href="gabinetes.html">Gabinetes</a></li>
+            <li><a href="redes.html">Redes</a></li>
             <li id="nSel"><br><br></li>
             <li><a href="cadastrodeproduto.php">Cadastro de Produto</a></li>
         </ul>

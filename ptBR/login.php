@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Cadastro de Produto</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js"></script>
-</head>
-<body>
-
 <?php
+    include '../inc/cabecalho.inc';
     include '../inc/conecta_mysql.inc';
 
     if(isset($_POST['email'])) {
@@ -23,35 +14,33 @@
         $entrar  = $_POST['entrar'];
     }
 
-    $continua = 0;
-
     if (isset($entrar)) {
                      
         $verifica = $conexao->query("SELECT * FROM `clientes` WHERE email = '".$Email."' AND senha = '".$Senha."'") or die("erro ao selecionar");
         if (mysqli_num_rows($verifica)<=0){
-                echo "<p uk-margin>
-                <script type='text/javascript'>
-                        UIkit.modal.alert('EMAIL E/OU SENHA ERRADOS !!!').then(function() {
+                exit("<p uk-margin>
+                        <script type='text/javascript'>
+                            UIkit.modal.alert('EMAIL E/OU SENHA ERRADOS !!!').then(function() {
                             window.location.replace('entrar.php');
-                        })
-                       blur()
-                </script>
-                </p>";
-                die();
+                            })
+                            blur()
+                        </script>
+                    </p>");
         } else {
+            $con    = $conexao->query("SELECT nome FROM `clientes` WHERE email = '".$Email."'") or die("erro ao selecionar");
+            $array  = $con->fetch_array();
+            $nome   = $array[0];
+
             setcookie("Email", $Email);
-            echo "<p uk-margin>
-                <script type='text/javascript'>
-                        UIkit.modal.alert('LOGADO COM SUCESSO !!!').then(function() {
+            setcookie("Nome", $nome);
+            exit("<p uk-margin>
+                    <script type='text/javascript'>
+                            UIkit.modal.alert('LOGADO COM SUCESSO !!!').then(function() {
                             window.location.replace('entrar.php');
                         })
-
-                       blur()
-                </script>
-                </p>";
-            
-            //header("location:formulario.php");
-            
+                        blur()
+                    </script>
+                </p>");
         }
     }
 ?>

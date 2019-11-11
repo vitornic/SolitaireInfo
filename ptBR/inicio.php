@@ -1,9 +1,10 @@
+<!DOCTYPE html>
 <html>
-
 <head>
     <link rel="icon" type="image/png" href="../images/fav.png">
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+    
     <title>Solitarie INFO</title>
 </head>
 
@@ -11,9 +12,9 @@
     <div class="nav">
         <form method="POST" action="pesquisa.php">
             <ul>
-                <a href="inicio.html"><img src="../images/thumbnail_Logo Solitarie.png"></a>
+                <a href="inicio.php"><img src="../images/thumbnail_Logo Solitarie.png"></a>
                 <input name="pesq" id="pesq" type="text" placeholder="PESQUISAR">
-                <input type="submit" id="lupa" value="      "></input>
+                <input type="submit" id="lupa" value="      ">
 
                 <div class="dropdown">
                     <button class="dropbtn"><a href="#">Traduzir</a></button>
@@ -21,9 +22,16 @@
                         <a href="../enUS/home.html">EN-US</a>
                     </div>
                 </div>
-                <li><a href="logout.php">Sair</a></li>
-                <li><a href="entrar.php">Login</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li>
+                <?php
+                    if(isset($_COOKIE["Nome"])) {
+                        $login_cookie = $_COOKIE['Nome'];
+                        echo "<li><a href='logout.php'>Sair</a></li>";
+                        echo "<li><a href='#'>Olá, $login_cookie</a></li>";
+                    } else {
+                        echo '<li><a href="entrar.php">Login</a></li>';
+                        echo '<li><a href="cadastro.html">Cadastro</a></li>';
+                    }
+                ?>
                 <li><a href="formulario.php">Formulário</a></li>
             </ul>
         </form>
