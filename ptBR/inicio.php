@@ -50,9 +50,19 @@
             <li><a href="audio.php">Áudio</a></li>
             <li><a href="gabinetes.php">Gabinetes</a></li>
             <li><a href="redes.php">Redes</a></li>
+            
             <li id="nSel">
+
                 <?php
-                    echo '<li><a href="cadastrodeproduto.php">Cadastro de Produto</a></li>';
+                    if(isset($_COOKIE["Nome"]) and (isset($_COOKIE["Email"]))) {
+                        $login_cookie = $_COOKIE['Nome'];
+                        echo "<li><hr></li>";
+                        echo "<li><a>Administrativo</a></li>";
+                        echo "<li><a href='perfil.php'>Olá, $login_cookie</a></li>";
+                        echo "<li><a href='cadastrodeproduto.php'>Cadastro de Produto</a></li>";
+                        echo "<li><a href='cadastrodetipo.php'>Cadastro de Tipo</a></li>";
+                        echo "<li><a href='logout.php'>Sair</a></li>";
+                    }    
                 ?>
              </li>
         </ul>

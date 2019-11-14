@@ -171,6 +171,11 @@ body {
   text-align: center;
 }
 
+.notmarked a:not {
+  color:white;
+
+}
+
 .sidebar ul {
   list-style-type: none;
   margin: 0;
