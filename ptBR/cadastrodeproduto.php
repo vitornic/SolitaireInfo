@@ -55,7 +55,7 @@
                         echo "<li><hr></li>";
                         echo "<li><a class='notmarked'>Administrativos</a></li>";
                         echo "<li><a href='perfil.php'>Olá, $login_cookie</a></li>";
-                        echo "<li><a href='cadastrodeproduto.php'>Cadastro de Produto</a></li>";
+                        echo "<li><a id='ativado' href='cadastrodeproduto.php'>Cadastro de Produto</a></li>";
                         echo "<li><a href='cadastrodetipo.php'>Cadastro de Tipo</a></li>";
                         echo "<li><a href='logout.php'>Sair</a></li>";
                     }    
