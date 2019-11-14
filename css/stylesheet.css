@@ -171,9 +171,16 @@ body {
   text-align: center;
 }
 
-.notmarked a:not {
-  color:white;
+.notmarked {
+  background-color:red;
+  color: #191919;
+  z-index: 1;
+}
 
+.notmarked :hover {
+  background-color:red;
+  color: #191919;
+  z-index: 1;
 }
 
 .sidebar ul {
@@ -194,7 +201,7 @@ body {
   text-align: center;
 }
 
-.sidebar li a:hover{
+.sidebar li a:hover :not(.notmarked){
   background:#d35400; 
   color:#fff; 
   box-shadow:0 3px 5px 0 #CCC; 
