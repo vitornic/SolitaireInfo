@@ -52,10 +52,9 @@
             <li><a href="redes.html">Redes</a></li>
             <li id="nSel">
                 <?php
-                    
+                    echo '<li><a href="cadastrodeproduto.php">Cadastro de Produto</a></li>';
                 ?>
              </li>
-            <li><a href="cadastrodeproduto.php">Cadastro de Produto</a></li>
         </ul>
     </div>
 
