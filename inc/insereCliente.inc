@@ -31,7 +31,7 @@ if (getenv("REQUEST_METHOD") == "POST") {
   } else if ($conexao->query($sql) == TRUE) { // Insere os dados (SQL orientado a objetos, mesma coisa q isso ->[mysli_query($conexao, $sql)])
 	ini_set('max_execution_time', 300); //Aumenta tempo de execução antes do time out
 	echo '<script>alert("Dados cadastrados!");
-		location.href = "../ptBR/entrar.html";
+		location.href = "../ptBR/entrar.php";
 	</script>'; // Cria a Tela do javascript com a mensagem
 
 	} else { echo '<script>alert("Não foi possível cadastrar! '.$sql.'");
