@@ -54,9 +54,9 @@ header("Content-type: text/html; charset=utf-8");
 include '../inc/conecta_mysql.inc';
 
 if(isset($_GET['pesq'])) {
-    $desc = $_GET['pesq'];
+    @$desc = $_GET['pesq'];
 } else {
-    $desc     = $_POST['pesq'];
+    @$desc     = $_POST['pesq'];
 }
 
 
