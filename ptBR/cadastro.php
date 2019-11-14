@@ -21,9 +21,17 @@
                         <a href="../enUS/signup.php">EN-US</a>
                     </div>
                 </div>
-                <li><a href="logout.php">Sair</a></li>
-                <li><a href="entrar.php">Login</a></li>
-                <li><a id="ativado" href="cadastro.php">Cadastro</a></li>
+                
+                <?php
+                    if(isset($_COOKIE["Nome"]) and (isset($_COOKIE["Email"]))) {
+                        $login_cookie = $_COOKIE['Nome'];
+                        echo "<li><a href='logout.php'>Sair</a></li>";
+                        echo "<li><a href='perfil.php'>Olá, $login_cookie</a></li>";
+                    } else {
+                        echo '<li><a href="entrar.php">Login</a></li>';
+                        echo '<li><a href="cadastro.php">Cadastro</a></li>';
+                    }
+                ?>
                 <li><a href="formulario.php">Formulário</a></li>
             </ul>
         </form>
@@ -41,8 +49,17 @@
             <li><a href="audio.php">Áudio</a></li>
             <li><a href="gabinetes.php">Gabinetes</a></li>
             <li><a href="redes.php">Redes</a></li>
-            <li id="nSel"><br><br></li>
-            <li><a href="cadastrodeproduto.php">Cadastro de Produto</a></li>
+            <?php
+                    if(isset($_COOKIE["Nome"]) and (isset($_COOKIE["Email"]))) {
+                        $login_cookie = $_COOKIE['Nome'];
+                        echo "<li><hr></li>";
+                        echo "<li><a class='notmarked'>Administrativos</a></li>";
+                        echo "<li><a href='perfil.php'>Olá, $login_cookie</a></li>";
+                        echo "<li><a href='cadastrodeproduto.php'>Cadastro de Produto</a></li>";
+                        echo "<li><a href='cadastrodetipo.php'>Cadastro de Tipo</a></li>";
+                        echo "<li><a href='logout.php'>Sair</a></li>";
+                    }    
+                ?> 
         </ul>
     </div>
 

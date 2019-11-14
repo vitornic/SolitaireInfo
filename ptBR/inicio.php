@@ -49,10 +49,7 @@
             <li><a href="video.php">Vídeo</a></li>
             <li><a href="audio.php">Áudio</a></li>
             <li><a href="gabinetes.php">Gabinetes</a></li>
-            <li><a href="redes.php">Redes</a></li>
-            
-            <li id="nSel">
-
+            <li><a href="redes.php">Redes</a></li>      
                 <?php
                     if(isset($_COOKIE["Nome"]) and (isset($_COOKIE["Email"]))) {
                         $login_cookie = $_COOKIE['Nome'];
@@ -63,8 +60,7 @@
                         echo "<li><a href='cadastrodetipo.php'>Cadastro de Tipo</a></li>";
                         echo "<li><a href='logout.php'>Sair</a></li>";
                     }    
-                ?>
-             </li>
+                ?>      
         </ul>
     </div>
 
