@@ -18,12 +18,12 @@
                 <div class="dropdown">
                     <button class="dropbtn"><a href="#">Traduzir</a></button>
                     <div class="dropdown-content">
-                        <a href="../enUS/login.html">EN-US</a>
+                        <a href="../enUS/login.php">EN-US</a>
                     </div>
                 </div>
                 <li><a href="logout.php">Sair</a></li>
                 <li><a id="ativado" href="entrar.php">Login</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="cadastro.php">Cadastro</a></li>
                 <li><a href="formulario.php">Formulário</a></li>
             </ul>
         </form>
@@ -32,15 +32,15 @@
     <div class="sidebar">
         <ul>
             <strong>CATEGORIAS</strong>
-            <li><a href="computadores.html">Computadores</a></li>
-            <li><a href="perifericos.html">Periféricos</a></li>
-            <li><a href="acessorios.html">Acessórios</a></li>
-            <li><a href="jogos.html">Jogos</a></li>
-            <li><a href="hardware.html">Armazenamento</a></li>
-            <li><a href="video.html">Vídeo</a></li>
-            <li><a href="audio.html">Áudio</a></li>
-            <li><a href="gabinetes.html">Gabinetes</a></li>
-            <li><a href="redes.html">Redes</a></li>
+            <li><a href="computadores.php">Computadores</a></li>
+            <li><a href="perifericos.php">Periféricos</a></li>
+            <li><a href="acessorios.php">Acessórios</a></li>
+            <li><a href="jogos.php">Jogos</a></li>
+            <li><a href="hardware.php">Armazenamento</a></li>
+            <li><a href="video.php">Vídeo</a></li>
+            <li><a href="audio.php">Áudio</a></li>
+            <li><a href="gabinetes.php">Gabinetes</a></li>
+            <li><a href="redes.php">Redes</a></li>
             <li id="nSel"><br><br></li>
             <li><a href="cadastrodeproduto.php">Cadastro de Produto</a></li>
         </ul>
@@ -55,7 +55,7 @@
         <input type="submit" value="ENTRAR" name="entrar">
         <input type="reset" value="LIMPAR">
         <h4><a href="#">Esqueceu a senha ?</a></h4>
-        <h4><a href="cadastro.html">Não tem um cadastro ?</h4>
+        <h4><a href="cadastro.php">Não tem um cadastro ?</h4>
     </form> -->
     </body>
 </html>
@@ -77,7 +77,7 @@
                 <input type='submit' value='ENTRAR' name='entrar'>
                 <input type='reset' value='LIMPAR'>
                 <h4><a href='#'>Esqueceu a senha ?</a></h4>
-                <h4><a href='cadastro.html'>Não tem um cadastro ?</h4>
+                <h4><a href='cadastro.php'>Não tem um cadastro ?</h4>
             </form>";
     }
     ?>

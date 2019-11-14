@@ -32,7 +32,7 @@ $con        = $conexao->query($consulta) or die($conexao->error);
                 </div>
                 <li><a href="logout.php">Sair</a></li>
                 <li><a href="entrar.php">Login</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="cadastro.php">Cadastro</a></li>
                 <li><a id="ativado" href="formulario.php">Formulário</a></li>
             </ul>
         </form>
@@ -41,15 +41,15 @@ $con        = $conexao->query($consulta) or die($conexao->error);
     <div class="sidebar">
         <ul>
             <strong>CATEGORIAS</strong>
-            <li><a href="../ptBR/computadores.html">Computadores</a></li>
-            <li><a href="../ptBR/perifericos.html">Periféricos</a></li>
-            <li><a href="../ptBR/acessorios.html">Acessórios</a></li>
-            <li><a href="../ptBR/jogos.html">Jogos</a></li>
-            <li><a href="../ptBR/armazenamento.html">Armazenamento</a></li>
-            <li><a href="../ptBR/video.html">Vídeo</a></li>
-            <li><a href="../ptBR/audio.html">Áudio</a></li>
-            <li><a href="../ptBR/gabinetes.html">Gabinetes</a></li>
-            <li><a href="../ptBR/redes.html">Redes</a></li>
+            <li><a href="../ptBR/computadores.php">Computadores</a></li>
+            <li><a href="../ptBR/perifericos.php">Periféricos</a></li>
+            <li><a href="../ptBR/acessorios.php">Acessórios</a></li>
+            <li><a href="../ptBR/jogos.php">Jogos</a></li>
+            <li><a href="../ptBR/armazenamento.php">Armazenamento</a></li>
+            <li><a href="../ptBR/video.php">Vídeo</a></li>
+            <li><a href="../ptBR/audio.php">Áudio</a></li>
+            <li><a href="../ptBR/gabinetes.php">Gabinetes</a></li>
+            <li><a href="../ptBR/redes.php">Redes</a></li>
             <li id="nSel"><br><br></li>
             <li><a href="cadastrodeproduto.php">Cadastro de Produto</a></li>
         </ul>

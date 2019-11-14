@@ -19,7 +19,7 @@
                 <div class="dropdown">
                     <button class="dropbtn"><a href="#">Traduzir</a></button>
                     <div class="dropdown-content">
-                        <a href="../enUS/home.html">EN-US</a>
+                        <a href="../enUS/home.php">EN-US</a>
                     </div>
                 </div>
                 <?php
@@ -29,7 +29,7 @@
                         echo "<li><a href='perfil.php'>Olá, $login_cookie</a></li>";
                     } else {
                         echo '<li><a href="entrar.php">Login</a></li>';
-                        echo '<li><a href="cadastro.html">Cadastro</a></li>';
+                        echo '<li><a href="cadastro.php">Cadastro</a></li>';
                     }
                 ?>
                 <li><a href="formulario.php">Formulário</a></li>
@@ -41,15 +41,15 @@
     <div class="sidebar">
         <ul>
             <strong>CATEGORIAS</strong>
-            <li><a href="computadores.html">Computadores</a></li>
-            <li><a href="perifericos.html">Periféricos</a></li>
-            <li><a href="acessorios.html">Acessórios</a></li>
-            <li><a href="jogos.html">Jogos</a></li>
-            <li><a href="hardware.html">Armazenamento</a></li>
-            <li><a href="video.html">Vídeo</a></li>
-            <li><a href="audio.html">Áudio</a></li>
-            <li><a href="gabinetes.html">Gabinetes</a></li>
-            <li><a href="redes.html">Redes</a></li>
+            <li><a href="computadores.php">Computadores</a></li>
+            <li><a href="perifericos.php">Periféricos</a></li>
+            <li><a href="acessorios.php">Acessórios</a></li>
+            <li><a href="jogos.php">Jogos</a></li>
+            <li><a href="hardware.php">Armazenamento</a></li>
+            <li><a href="video.php">Vídeo</a></li>
+            <li><a href="audio.php">Áudio</a></li>
+            <li><a href="gabinetes.php">Gabinetes</a></li>
+            <li><a href="redes.php">Redes</a></li>
             <li id="nSel">
                 <?php
                     
@@ -65,23 +65,23 @@
 
     <div class="promo">
         <div class="promo1">
-            <a href="computadores.html"><img src="../images/imgPromo01.png"></a>
+            <a href="computadores.php"><img src="../images/imgPromo01.png"></a>
         </div>
 
         <div class="promo2">
-            <a href="armazenamento.html"><img src="../images/imgPromo02.png"></a>
+            <a href="hardware.php"><img src="../images/imgPromo02.png"></a>
         </div>
 
         <div class="promo3">
-            <a href="video.html"><img src="../images/imgPromo03.png"></a>
+            <a href="video.php"><img src="../images/imgPromo03.png"></a>
         </div>
 
         <div class="promo4">
-            <a href="perifericos.html"><img src="../images/imgPromo04.png"></a>
+            <a href="perifericos.php"><img src="../images/imgPromo04.png"></a>
         </div>
 
         <div class="promo5">
-            <a href="formulario.html"><img src="../images/imgPromo.png"></a>
+            <a href="formulario.php"><img src="../images/imgPromo.png"></a>
         </div>
     </div>
 </body>
