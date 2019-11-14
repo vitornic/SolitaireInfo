@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <div class="nav">
+<div class="nav">
         <form method="POST" action="pesquisa.php">
             <ul>
                 <a href="inicio.php"><img src="../images/thumbnail_Logo Solitarie.png"></a>
@@ -18,12 +18,20 @@
                 <div class="dropdown">
                     <button class="dropbtn"><a href="#">Traduzir</a></button>
                     <div class="dropdown-content">
-                        <a href="../enUS/signup.php">EN-US</a>
+                        <a href="../enUS/">EN-US</a>
                     </div>
                 </div>
-                <li><a href="logout.php">Sair</a></li>
-                <li><a href="entrar.php">Login</a></li>
-                <li><a id="ativado" href="cadastro.php">Cadastro</a></li>
+                
+                <?php
+                    if(isset($_COOKIE["Nome"]) and (isset($_COOKIE["Email"]))) {
+                        $login_cookie = $_COOKIE['Nome'];
+                        echo "<li><a href='logout.php'>Sair</a></li>";
+                        echo "<li><a href='perfil.php'>Olá, $login_cookie</a></li>";
+                    } else {
+                        echo '<li><a href="entrar.php">Login</a></li>';
+                        echo '<li><a href="cadastro.php">Cadastro</a></li>';
+                    }
+                ?>
                 <li><a href="formulario.php">Formulário</a></li>
             </ul>
         </form>
