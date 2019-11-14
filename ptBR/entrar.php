@@ -21,9 +21,6 @@
                         <a href="../enUS/login.php">EN-US</a>
                     </div>
                 </div>
-                <li><a href="logout.php">Sair</a></li>
-                <li><a id="ativado" href="entrar.php">Login</a></li>
-                <li><a href="cadastro.php">Cadastro</a></li>
                 <?php
                     if(isset($_COOKIE["Nome"]) and (isset($_COOKIE["Email"]))) {
                         $login_cookie = $_COOKIE['Nome'];
