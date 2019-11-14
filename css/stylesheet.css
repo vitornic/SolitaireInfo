@@ -201,12 +201,16 @@ body {
   text-align: center;
 }
 
-.sidebar li a:hover :not(.notmarked){
+.sidebar li a:hover:not(.notmarked) {
   background:#d35400; 
   color:#fff; 
   box-shadow:0 3px 5px 0 #CCC; 
   -webkit-box-shadow:0 3px 10px 0 #ccc; 
   text-shadow:0px 0px 5px #fff; 
+}
+
+.sidebar li a:hover {
+  background: red;
 }
 
 .sidebar strong {
