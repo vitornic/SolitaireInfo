@@ -59,8 +59,8 @@ $con        = $conexao->query($consulta) or die($conexao->error);
             <li><a href="../ptBR/gabinetes.php">Gabinetes</a></li>
             <li><a href="../ptBR/redes.php">Redes</a></li>
             <?php
-                    if(isset($_COOKIE["Nome"]) and (isset($_COOKIE["Email"]))) {
-                        $login_cookie = $_COOKIE['Nome'];
+                    if(isset($_COOKIE["NomeADM"]) and (isset($_COOKIE["EmailADM"]))) {
+                        $login_cookie = $_COOKIE['NomeADM'];
                         echo "<li><hr></li>";
                         echo "<li><a class='notmarked'>Administrativos</a></li>";
                         echo "<li><a href='perfil.php'>Olá, $login_cookie</a></li>";
