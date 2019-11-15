@@ -75,7 +75,7 @@
         echo "</div>";
     } else {
         echo "<br>";
-        echo "<form method='POST' action='login.php' class='boxform' accept-charset='UTF-8'>
+        echo "<form method='POST' action='loginadm.php' class='boxform' accept-charset='UTF-8'>
                 <h1>login Administrativo</h1>
                 <input placeholder='Email' type='Email' name='emailADM' required='true' maxlength='100' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$' title='exemple@exemple.com'>
                 <input placeholder='Senha' type='password' size='20' name='senhaADM' required = 'true'>
