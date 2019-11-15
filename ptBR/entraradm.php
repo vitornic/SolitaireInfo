@@ -66,7 +66,7 @@
 </html>
 
 <?php
-    @$login_cookie = $_COOKIE['EmailADM'] and $_COOKIE['SenhaADM'];
+    @$login_cookie = $_COOKIE['EmailADM'] and @$_COOKIE['SenhaADM'];
     if(isset($login_cookie)){
         echo"<br>";
         echo "<div class='boxform'>";
