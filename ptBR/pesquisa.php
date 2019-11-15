@@ -92,11 +92,13 @@ echo "<script>console.log(`$consulta`)</script>";
 		<?php
   			@$login_cookie = $_COOKIE['Email'];
     			if(isset($login_cookie)){
+                    echo "<center>";
     			    echo"<br>";
                     echo "<div class='boxmensagem'>";
     			    echo"Bem-Vindo, $login_cookie <br>";
 				    echo"Essas informações <font color='green'>PODEM</font> ser acessadas por você";
                     echo "</div>";
+                    echo "<br>"; 
                     include '../inc/conecta_mysql.inc';
                 	include '../inc/showpesq.inc';
                     } else {
@@ -108,6 +110,7 @@ echo "<script>console.log(`$consulta`)</script>";
         				    Essas informações <font color='red'>NÃO PODEM</font> ser acessadas por você
         				    <br><a href='../ptBR/entrar.php'>Faça Login</a> Para ler o conteúdo
 				    </div>
+                    echo "</center>";
 EOD;
 }
 ?>
