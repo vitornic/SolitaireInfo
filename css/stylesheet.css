@@ -386,7 +386,7 @@ img {
   text-align: center;
   border: 2px solid #d35400;
   padding: 14px 40px;
-  width: 200px;
+  width: 225px;
   outline: none;
   color: black;
   border-radius: 24px;
@@ -467,8 +467,6 @@ table {
   user-select: none;
 }
 
-/* Fim ? */
-
 /* ------------------------------------------------------------------------------------------- */
 
 /* Mensagens de Login */
@@ -484,3 +482,5 @@ table {
 }
 
 /* Fim das Mensagens de Login*/
+
+/* ------------------------------------------------------------------------------------------- */

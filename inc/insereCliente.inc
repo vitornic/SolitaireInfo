@@ -1,5 +1,6 @@
 <?php
 
+include 'cabecalho.inc';
 include 'conecta_mysql.inc';
 
 $Nome           = $_POST['CNome']; // Captura as informações no HTML
@@ -26,45 +27,37 @@ if (getenv("REQUEST_METHOD") == "POST") {
   } else {
       if($logarray == $Email){ //Verificação no servidor
  
-        echo"<script>alert('Esse Email já existe');window.location.href='../ptBR/cadastro.html';window.document.title = 'erro';﻿</script>";
-        die();
-  } else if ($conexao->query($sql) == TRUE) { // Insere os dados (SQL orientado a objetos, mesma coisa q isso ->[mysli_query($conexao, $sql)])
-	ini_set('max_execution_time', 300); //Aumenta tempo de execução antes do time out
-	echo '<script>alert("Dados cadastrados!");
-		location.href = "../ptBR/entrar.php";
-	</script>'; // Cria a Tela do javascript com a mensagem
+        exit("<p uk-margin>
+                <script type='text/javascript'>
+                  UIkit.modal.alert('EMAIL JA EXISTE, ESCOLHA OUTRO !!!').then(function() {
+                  window.location.replace('../ptBR/cadastro.php');
+                  })
+                  blur()
+                </script>
+              </p>");
 
-	} else { echo '<script>alert("Não foi possível cadastrar! '.$sql.'");
-				location.href = "../ptBR/cadastro.html";
-		</script>'; 
+  } else if ($conexao->query($sql) == TRUE) { 
+	ini_set('max_execution_time', 300); //Aumenta tempo de execução antes do time out
+	exit("<p uk-margin>
+                <script type='text/javascript'>
+                  UIkit.modal.alert('CADASTRADO COM SUCESSO !!! REDIRECIONANDO...').then(function() {
+                  window.location.replace('../ptBR/entrar.php');
+                  })
+                  blur()
+                </script>
+              </p>");
+
+	} else { 
+    exit("<p uk-margin>
+                <script type='text/javascript'>
+                  UIkit.modal.alert('OOPS... ALGO DEU ERRADO').then(function() {
+                  window.location.replace('../ptBR/cadastro.php');
+                  })
+                  blur()
+                </script>
+              </p>");
   }
 }
 }
-
-/* LIXO \/
-
-if($Email == "" || $Email == null){ //Verificação já feita no HTML
-    echo"<script>alert('O campo Email deve ser preenchido');window.location.href='../ptBR/cadastro.html';window.parent.document.title = x;</script>";
- 
-    } else { //Verificação nível servidor
-      if($logarray == $Email){
- 
-        echo"<script>alert('Esse Email já existe');window.location.href='../ptBR/cadastro.html';window.document.title = 'titulo';﻿</script>";
-        die();
- 
-      } else {
-        $conexao->query($sql);
-         
-        if($sql){
-          echo"<script>alert('Usuário cadastrado com sucesso!');window.location.href='../ptBR/entrar.html'</script>";
-        } else {
-          echo"<script>alert('Não foi possível cadastrar esse usuário');window.location.href='../ptBR/cadastro.html'</script>";
-        }
-      }
-    }
-
-    */
-
 $conexao->close();
-
 ?>
