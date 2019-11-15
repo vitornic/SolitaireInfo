@@ -13,61 +13,6 @@ body {
   background-color:#ecf0f1;
 }
 
-/* Fim Configs */
-
-/* ------------------------------------------------------------------------------------------- */
-
-/* Dropdown */
-
-.dropbtn {
-  background-color: #e67e22;
-  color: white;
-  font-size: 16px;
-  border: none;
-
-  text-align: center;
-  padding: 23px 16px;
-  margin-left: 2vh;
-  text-decoration: none;
-  font-family: Metropolis;
-}
-
-.dropbtn a {
-  color: white;
-}
-
-.dropdown {
-  position: absolute;
-  display: inline-block;
-}
-
-.dropbtn:hover {
-  background-color: #d35400;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #e67e22;
-  /*min-width: 80px;*/
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  margin-left: 2vh;
-}
-
-.dropdown-content a {
-  color: white;
-  /*padding: 12px 21px;*/
-  padding: 0.5vh 3.50vh;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {background-color: #d35400;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-/* Fim dropdown */
-
 /* ------------------------------------------------------------------------------------------- */
 
 /* Navegação TOP */
@@ -122,6 +67,8 @@ body {
   border-radius: 24px;
   border: #e67e22;
   text-align: center;
+  min-width: 20vh;
+  max-width: 84vh;
 }
 
 .nav input[type="text"]:focus { 
@@ -235,8 +182,7 @@ body {
   float: right;
   margin: auto;
   width: 81.6%;
-  height: auto;
-  /*height: auto;*/
+  height: 22.42em;
   user-select: none;
 }
 
@@ -375,6 +321,8 @@ img {
 
 .nav #translate {
   float: right;
+  margin: -10px;
+  margin-right: -5px;
 }
 
 /* End Region */

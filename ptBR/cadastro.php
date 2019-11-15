@@ -15,23 +15,9 @@
                 <input name="pesq" id="pesq" type="text" placeholder="PESQUISAR">
                 <input type="submit" id="lupa" value="      ">
 
-                <div class="dropdown">
-                    <button class="dropbtn"><a href="#">Traduzir</a></button>
-                    <div class="dropdown-content">
-                        <a href="../enUS/signup.php">EN-US</a>
-                    </div>
-                </div>
+                <li><a href="../enUS/signup.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a></li>
                 
-                <?php
-                    if(isset($_COOKIE["Nome"]) and (isset($_COOKIE["Email"]))) {
-                        $login_cookie = $_COOKIE['Nome'];
-                        echo "<li><a href='logout.php'>Sair</a></li>";
-                        echo "<li><a href='perfil.php'>Olá, $login_cookie</a></li>";
-                    } else {
-                        echo '<li><a href="entrar.php">Login</a></li>';
-                        echo '<li><a href="cadastro.php">Cadastro</a></li>';
-                    }
-                ?>
+                <?php include '../inc/PTverificaLoginCliente.inc'; ?>
                 <li><a href="formulario.php">Formulário</a></li>
             </ul>
         </form>
@@ -48,32 +34,22 @@
             <li><a href="video.php">Vídeo</a></li>
             <li><a href="audio.php">Áudio</a></li>
             <li><a href="gabinetes.php">Gabinetes</a></li>
-            <li><a href="redes.php">Redes</a></li>
-            <?php
-                    if(isset($_COOKIE["NomeADM"]) and (isset($_COOKIE["EmailADM"]))) {
-                        $login_cookie = $_COOKIE['NomeADM'];
-                        echo "<li><hr></li>";
-                        echo "<li><a class='notmarked'>Administrativos</a></li>";
-                        echo "<li><a href='perfil.php'>Olá, $login_cookie</a></li>";
-                        echo "<li><a href='cadastrodeproduto.php'>Cadastro de Produto</a></li>";
-                        echo "<li><a href='cadastrodetipo.php'>Cadastro de Tipo</a></li>";
-                        echo "<li><a href='logout.php'>Sair</a></li>";
-                    }    
-                ?> 
+            <li><a href="redes.php">Redes</a></li>      
+            <?php include '../inc/PTverificaLoginAdm.inc'; ?>
         </ul>
     </div>
 
     <form method="POST" action="../php/verifica.php" class="boxform" accept-charset="UTF-8">
         <h1>cadastro cliente</h1>
         <label for="nome">
-                            <input id="idNome" name="CNome" type="text" placeholder="Nome" maxlength="100" required="true"></label>
+        <input id="idNome" name="CNome" type="text" placeholder="Nome" maxlength="100" required="true"></label>
         <input placeholder="Email" type="Email" name="CEmail" required="true" maxlength="100" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="exemple@exemple.com">
         <input placeholder="Senha" type="password" size="20" name="CSenha" required = "true">
         <input placeholder="Telefone" name="CTel" maxlength="11" type="text" pattern="[0-9]{2}[0-9]{9}$" required="true">
         <input type="submit" value="CADASTRAR" name="entrar">
         <input type="reset" value="LIMPAR">
         <h4><a href="entrar.php">Já possui tem um cadastro ?</a></h4>
-        <h4><a href="cadastroadm.php">É um administrador ?</a></h4>
+        <h4><a href="cadastroadm.php"><font color=red>Cadastro Administrativo</font></a></h4>
     </form>
 </body>
 

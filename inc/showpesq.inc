@@ -9,7 +9,9 @@
 		    <td>Tipo do Produto</td>
 		    <td>Descricão do Tipo</td>
 		</tr>
-		<?php while($dado = $con->fetch_array()) { ?>
+		<?php 
+		include '../inc/conecta_mysql.inc';
+		while($dado = $con->fetch_array()) { ?>
 		<tr>
 			<td><?php echo $dado[0]; ?></td>
 			<td><?php echo $dado[1]; ?></td>
@@ -19,6 +21,8 @@
 			<td><?php echo $dado[5]; ?></td>
 			<td><?php echo $dado[6]; ?></td>
 		</tr>
-	<?php } ?>
+	<?php } 
+	mysqli_close($conexao);
+	?>
 	</thead>
 </table>
