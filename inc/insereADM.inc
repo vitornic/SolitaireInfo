@@ -27,22 +27,22 @@ $logarrayadm = $arrayadm['email'];
 
 if (getenv("REQUEST_METHOD") == "POST") { 
   if($Email == "" || $Email == null){ //Verificação já feita no HTML
-    echo"<script>alert('O campo Email deve ser preenchido');window.location.href='../ptBR/cadastro.html';window.parent.document.title = x;</script>";
+    echo"<script>alert('O campo Email deve ser preenchido');window.location.href='../ptBR/cadastroadm.php';window.parent.document.title = x;</script>";
   } else {
       if ($logarray == $Email) {
-        echo"<script>alert('Esse Email já existe');window.location.href='../ptBR/cadastro.html';window.document.title = 'erro';﻿</script>";
+        echo"<script>alert('Esse Email já existe');window.location.href='../ptBR/cadastroadm.php';window.document.title = 'erro';﻿</script>";
         die();
       } else if ($logarrayadm == $Email){ //Verificação no servidor
-        echo"<script>alert('Esse Email já existe');window.location.href='../ptBR/cadastro.html';window.document.title = 'erro';﻿</script>";
+        echo"<script>alert('Esse Email já existe');window.location.href='../ptBR/cadastroadm.php';window.document.title = 'erro';﻿</script>";
         die();
   } else if ($conexao->query($sql) == TRUE) { // Insere os dados (SQL orientado a objetos, mesma coisa q isso ->[mysli_query($conexao, $sql)])
 	ini_set('max_execution_time', 300); //Aumenta tempo de execução antes do time out
 	echo '<script>alert("Dados cadastrados!");
-		location.href = "../ptBR/entrar.php";
+		location.href = "../ptBR/entraradm.php";
 	</script>'; // Cria a Tela do javascript com a mensagem
 
 	} else { echo '<script>alert("Não foi possível cadastrar! '.$sql.'");
-				location.href = "../ptBR/cadastro.html";
+				location.href = "../ptBR/cadastroadm.php";
 		</script>'; 
   }
 }
