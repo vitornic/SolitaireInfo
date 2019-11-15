@@ -93,7 +93,8 @@
                 <input type='submit' value='ENTRAR' name='entrar'>
                 <input type='reset' value='LIMPAR'>
                 <h4><a href='#'>Esqueceu a senha ?</a></h4>
-                <h4><a href='cadastro.php'>Não tem um cadastro ?</h4>
+                <h4><a href='cadastro.php'>Não tem um cadastro ?</a></h4>
+                <h4><a href='entraradm.php'>Login Administrativo!</a></h4>
             </form>";
     }
     ?>
