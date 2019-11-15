@@ -2,17 +2,17 @@
 
 include 'conecta_mysql.inc';
 
-$Nome           = $_POST['CNome']; // Captura as informações no HTML
-$Email 	        = $_POST['CEmail'];
-$Senha          = $_POST['CSenha'];
-$Fone           = $_POST['CTel'];
+$Nome           = $_POST['ADMNome']; // Captura as informações no HTML
+$Email 	        = $_POST['ADMEmail'];
+$Senha          = $_POST['ADMSenha'];
+$Fone           = $_POST['ADMTel'];
 
-$codigomax  = "SELECT MAX(codigo) as codigo FROM `clientes`"; // Bloco responsavel pelo Auto Increment do codigo
+$codigomax  = "SELECT MAX(codigo) as codigo FROM `administradores`"; // Bloco responsavel pelo Auto Increment do codigo
 $con        = $conexao->query($codigomax) or die($conexao->error);
 $array      = $con->fetch_array();
 $logarray   = $array[0] + 1;
 
-$sql = "INSERT INTO clientes VALUES"; // Prepara o Insert no Banco de Dados
+$sql = "INSERT INTO administradores VALUES"; // Prepara o Insert no Banco de Dados
 $sql .= "(".$logarray.", '".$Nome."', '".$Email."', '".$Senha."', ".$Fone.")";
 
 $selecao  = "SELECT email FROM clientes WHERE email = '".$Email."'"; // Seleciona Email para verificação
@@ -32,10 +32,7 @@ if (getenv("REQUEST_METHOD") == "POST") {
       if ($logarray == $Email) {
         echo"<script>alert('Esse Email já existe');window.location.href='../ptBR/cadastro.html';window.document.title = 'erro';﻿</script>";
         die();
-      }
-
-      if($logarrayadm == $Email){ //Verificação no servidor
- 
+      } else if ($logarrayadm == $Email){ //Verificação no servidor
         echo"<script>alert('Esse Email já existe');window.location.href='../ptBR/cadastro.html';window.document.title = 'erro';﻿</script>";
         die();
   } else if ($conexao->query($sql) == TRUE) { // Insere os dados (SQL orientado a objetos, mesma coisa q isso ->[mysli_query($conexao, $sql)])
