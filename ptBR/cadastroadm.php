@@ -49,18 +49,27 @@
             <li><a href="audio.php">Áudio</a></li>
             <li><a href="gabinetes.php">Gabinetes</a></li>
             <li><a href="redes.php">Redes</a></li>
-            <li id="nSel"><br><br></li>
-            <li><a href="cadastrodeproduto.php">Cadastro de Produto</a></li>
+            <?php
+                    if(isset($_COOKIE["NomeADM"]) and (isset($_COOKIE["EmailADM"]))) {
+                        $login_cookie = $_COOKIE['NomeADM'];
+                        echo "<li><hr></li>";
+                        echo "<li><a class='notmarked'>Administrativos</a></li>";
+                        echo "<li><a href='perfil.php'>Olá, $login_cookie</a></li>";
+                        echo "<li><a href='cadastrodeproduto.php'>Cadastro de Produto</a></li>";
+                        echo "<li><a id='ativado' href='cadastrodetipo.php'>Cadastro de Tipo</a></li>";
+                        echo "<li><a href='logout.php'>Sair</a></li>";
+                    }    
+                ?> 
         </ul>
     </div>
 
-    <form method="POST" action="../php/verifica.php" class="boxform" accept-charset="UTF-8">
-        <h1>cadastro cliente</h1>
+    <form method="POST" action="../php/verificaadm.php" class="boxform" accept-charset="UTF-8">
+        <h1>cadastro Administrativo</h1>
         <label for="nome">
-                            <input id="idNome" name="CNome" type="text" placeholder="Nome" maxlength="100" required="true"></label>
-        <input placeholder="Email" type="Email" name="CEmail" required="true" maxlength="100" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="exemple@exemple.com">
-        <input placeholder="Senha" type="password" size="20" name="CSenha" required = "true">
-        <input placeholder="Telefone" name="CTel" maxlength="11" type="text" pattern="[0-9]{2}[0-9]{9}$" required="true">
+                            <input id="idNome" name="ADMNome" type="text" placeholder="Nome" maxlength="100" required="true"></label>
+        <input placeholder="Email" type="Email" name="ADMEmail" required="true" maxlength="100" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="exemple@exemple.com">
+        <input placeholder="Senha" type="password" size="20" name="ADMSenha" required = "true">
+        <input placeholder="Telefone" name="ADMTel" maxlength="11" type="text" pattern="[0-9]{2}[0-9]{9}$" required="true">
         <input type="submit" value="CADASTRAR" name="entrar">
         <input type="reset" value="LIMPAR">
         <h4><a href="entrar.php">Já possui tem um cadastro ?</a></h4>

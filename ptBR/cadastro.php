@@ -73,6 +73,7 @@
         <input type="submit" value="CADASTRAR" name="entrar">
         <input type="reset" value="LIMPAR">
         <h4><a href="entrar.php">Já possui tem um cadastro ?</a></h4>
+        <h4><a href="cadastroadm.php">É um administrador ?</a></h4>
     </form>
 </body>
 
