@@ -14,7 +14,19 @@
                     blur();
                 </script>
             </p>");
-        } else { // Se não
-            exit(header("Location: $paginaAtual")); //Volta o usuário para a página que estava inicialmente
-        }
+        } else if(isset($_COOKIE["EmailADM"]) OR (isset($_COOKIE["NomeADM"]))) { //verifica se o cookie "Email" existe
+            setcookie("EmailADM", null, -1); // Seta o cookie "Email" como nulo, excluindo-o
+            setcookie("NomeADM", null, -1);
+            exit("<p uk-margin>
+                    <script type='text/javascript'>
+                        UIkit.modal.alert('SAINDO...').then(function() {
+                            window.location.replace('$paginaAtual');
+                        })
+                        blur();
+                    </script>
+                </p>");
+            } else {
+                exit(header("Location: $paginaAtual")); //Volta o usuário para a página que estava inicialmente
+            }
+
 ?>

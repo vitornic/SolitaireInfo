@@ -4,7 +4,7 @@
     <link rel="icon" type="image/png" href="../images/fav.png">
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
-    <title>Cadastro de Tipo</title>
+    <title>Login</title>
 </head>
 
 <body>
@@ -18,13 +18,12 @@
                 <div class="dropdown">
                     <button class="dropbtn"><a href="#">Traduzir</a></button>
                     <div class="dropdown-content">
-                        <a href="../enUS/">EN-US</a>
+                        <a href="../enUS/login.php">EN-US</a>
                     </div>
                 </div>
-                
                 <?php
-                    if(isset($_COOKIE["Nome"]) and (isset($_COOKIE["Email"]))) {
-                        $login_cookie = $_COOKIE['Nome'];
+                    if(isset($_COOKIE["NomeADM"]) and (isset($_COOKIE["EmailADM"]))) {
+                        $login_cookie = $_COOKIE['NomeADM'];
                         echo "<li><a href='logout.php'>Sair</a></li>";
                         echo "<li><a href='perfil.php'>Olá, $login_cookie</a></li>";
                     } else {
@@ -55,59 +54,35 @@
                         echo "<li><hr></li>";
                         echo "<li><a class='notmarked'>Administrativos</a></li>";
                         echo "<li><a href='perfil.php'>Olá, $login_cookie</a></li>";
-                        echo "<li><a id='ativado' href='cadastrodeproduto.php'>Cadastro de Produto</a></li>";
+                        echo "<li><a href='cadastrodeproduto.php'>Cadastro de Produto</a></li>";
                         echo "<li><a href='cadastrodetipo.php'>Cadastro de Tipo</a></li>";
                         echo "<li><a href='logout.php'>Sair</a></li>";
                     }    
-                ?> 
+                ?>
         </ul>
     </div>
 
-    <form method="POST" action="../php/verificaProduto.php" class="boxform" accept-charset="UTF-8">
-        <h1>Cadastro de Produto</h1>
-        <input placeholder="Nome do Produto" type="text" name="PNome">
-        <input placeholder="Descrição do Produto" type="text" name="PDesc">
-        <input placeholder="Custo do Produto" type="float" name="PCusto">
-        <input placeholder="Preço de Venda" type="float" name="PVenda">
-        <input placeholder="Foto do Produto" type="text" name="PFoto">
-        <select name="PTipo">
-            <option disabled selected>TIPO</option>
-            <?php
-                include '../inc/conecta_mysql.inc';
-
-                $sql = "SELECT codigo, descricao FROM tipoprod";
-                $rs = mysqli_query($conexao, $sql);
-
-
-                while ($row = mysqli_fetch_assoc($rs)) {
-                    $cod = $row['codigo'];
-                    $desc = $row['descricao'];
-                    echo "<option value=$cod>$desc</option>";
-                }
-            mysqli_close($conexao);
-            ?>;
-        </select>
-        <select name="PForne">
-            <option disabled selected>FORNECEDOR</option>
-            <?php
-                include '../inc/conecta_mysql.inc';
-
-                $sql = "SELECT codigo, nome FROM fornecedores";
-                $rs = mysqli_query($conexao, $sql);
-
-
-                while ($row = mysqli_fetch_assoc($rs)) {
-                    $cod = $row['codigo'];
-                    $nome = $row['nome'];
-                    echo "<option value=$cod>$nome</option>";
-                }
-            mysqli_close($conexao);
-            ?>;
-        </select>
-        <br>
-        <input type="submit" value="CADASTRAR" id="enviar">
-        <input type="reset" value="LIMPAR">
-        <h4><a href="cadastrodetipo.php">Cadastrar um tipo de Produto</h4>
-    </form>
-</body>
+    </body>
 </html>
+
+<?php
+    @$login_cookie = $_COOKIE['EmailADM'] and @$_COOKIE['SenhaADM'];
+    if(isset($login_cookie)){
+        echo"<br>";
+        echo "<div class='boxform'>";
+        echo"Bem-Vindo, ".$login_cookie." <br>";
+        echo"Você já está <font color='green'>LOGADO</font>";
+        echo "</div>";
+    } else {
+        echo "<br>";
+        echo "<form method='POST' action='loginadm.php' class='boxform' accept-charset='UTF-8'>
+                <h1>login Administrativo</h1>
+                <input placeholder='Email' type='Email' name='emailADM' required='true' maxlength='100' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$' title='exemple@exemple.com'>
+                <input placeholder='Senha' type='password' size='20' name='senhaADM' required = 'true'>
+                <input type='submit' value='ENTRAR' name='entrar'>
+                <input type='reset' value='LIMPAR'>
+                <h4><a href='#'>Esqueceu a senha ?</a></h4>
+                <h4><a href='cadastro.php'>Não tem um cadastro ?</h4>
+            </form>";
+    }
+    ?>

@@ -30,9 +30,17 @@ $con        = $conexao->query($consulta) or die($conexao->error);
                         <a href="../enUS/form.php">EN-US</a>
                     </div>
                 </div>
-                <li><a href="logout.php">Sair</a></li>
-                <li><a href="entrar.php">Login</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li>
+            
+                <?php
+                    if(isset($_COOKIE["Nome"]) and (isset($_COOKIE["Email"]))) {
+                        $login_cookie = $_COOKIE['Nome'];
+                        echo "<li><a href='logout.php'>Sair</a></li>";
+                        echo "<li><a href='perfil.php'>Olá, $login_cookie</a></li>";
+                    } else {
+                        echo '<li><a href="entrar.php">Login</a></li>';
+                        echo '<li><a href="cadastro.php">Cadastro</a></li>';
+                    }
+                ?>
                 <li><a id="ativado" href="formulario.php">Formulário</a></li>
             </ul>
         </form>
@@ -41,17 +49,26 @@ $con        = $conexao->query($consulta) or die($conexao->error);
     <div class="sidebar">
         <ul>
             <strong>CATEGORIAS</strong>
-            <li><a href="../ptBR/computadores.html">Computadores</a></li>
-            <li><a href="../ptBR/perifericos.html">Periféricos</a></li>
-            <li><a href="../ptBR/acessorios.html">Acessórios</a></li>
-            <li><a href="../ptBR/jogos.html">Jogos</a></li>
-            <li><a href="../ptBR/armazenamento.html">Armazenamento</a></li>
-            <li><a href="../ptBR/video.html">Vídeo</a></li>
-            <li><a href="../ptBR/audio.html">Áudio</a></li>
-            <li><a href="../ptBR/gabinetes.html">Gabinetes</a></li>
-            <li><a href="../ptBR/redes.html">Redes</a></li>
-            <li id="nSel"><br><br></li>
-            <li><a href="cadastrodeproduto.php">Cadastro de Produto</a></li>
+            <li><a href="../ptBR/computadores.php">Computadores</a></li>
+            <li><a href="../ptBR/perifericos.php">Periféricos</a></li>
+            <li><a href="../ptBR/acessorios.php">Acessórios</a></li>
+            <li><a href="../ptBR/jogos.php">Jogos</a></li>
+            <li><a href="../ptBR/hardware.php">Armazenamento</a></li>
+            <li><a href="../ptBR/video.php">Vídeo</a></li>
+            <li><a href="../ptBR/audio.php">Áudio</a></li>
+            <li><a href="../ptBR/gabinetes.php">Gabinetes</a></li>
+            <li><a href="../ptBR/redes.php">Redes</a></li>
+            <?php
+                    if(isset($_COOKIE["NomeADM"]) and (isset($_COOKIE["EmailADM"]))) {
+                        $login_cookie = $_COOKIE['NomeADM'];
+                        echo "<li><hr></li>";
+                        echo "<li><a class='notmarked'>Administrativos</a></li>";
+                        echo "<li><a href='perfil.php'>Olá, $login_cookie</a></li>";
+                        echo "<li><a href='cadastrodeproduto.php'>Cadastro de Produto</a></li>";
+                        echo "<li><a href='cadastrodetipo.php'>Cadastro de Tipo</a></li>";
+                        echo "<li><a href='logout.php'>Sair</a></li>";
+                    }    
+                ?>
         </ul>
     </div>
 
