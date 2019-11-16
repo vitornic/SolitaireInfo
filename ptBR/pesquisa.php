@@ -16,7 +16,7 @@
                 <input type="submit" id="lupa" value="      ">
 
                 <li><a href="../enUS/search.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a></li>
-                <?php include '../inc/PTverificaLoginCliente.inc'; ?>
+                <?php include '../inc/PTverificaLogadoCliente.inc'; ?>
                 <li><a href="formulario.php">Formulário</a></li>
             </ul>
         </form>
@@ -34,7 +34,7 @@
             <li><a href="audio.php">Áudio</a></li>
             <li><a href="gabinetes.php">Gabinetes</a></li>
             <li><a href="redes.php">Redes</a></li>      
-            <?php include '../inc/PTverificaLoginAdm.inc'; ?>
+            <?php include '../inc/PTverificaLogadoAdm.inc'; ?>
         </ul>
     </div>
  
@@ -74,7 +74,7 @@ mysqli_close($conexao);
 				    echo "Essas informações <font color='green'>PODEM</font> ser acessadas por você";
                     echo "</div>";
                     echo "<br>"; 
-                	include '../inc/showpesq.inc';
+                	include '../inc/PTMostrarPesquisa.inc';
                     } else {
                     echo "<br>";
                     echo '<div class = "boxform">

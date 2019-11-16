@@ -1,6 +1,6 @@
 <?php
 
-include 'cabecalho.inc';
+include 'PTcabecalho.inc';
 include 'conecta_mysql.inc';
 
 $Nome           = $_POST['ADMNome']; // Captura as informações no HTML

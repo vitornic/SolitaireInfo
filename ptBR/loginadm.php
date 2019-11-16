@@ -1,5 +1,5 @@
 <?php
-    include '../inc/cabecalho.inc';
+    include '../inc/PTcabecalho.inc';
     include '../inc/conecta_mysql.inc';
 
     $paginaAtual = $_SERVER['HTTP_REFERER'];

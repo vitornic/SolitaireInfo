@@ -26,7 +26,7 @@ $con        = $conexao->query($consulta) or die($conexao->error);
 
                 <li><a href="../enUS/form.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a></li>
             
-                <?php include '../inc/PTverificaLoginCliente.inc'; ?>
+                <?php include '../inc/PTverificaLogadoCliente.inc'; ?>
                 <li><a id="ativado" href="formulario.php">Formulário</a></li>
             </ul>
         </form>
@@ -44,7 +44,7 @@ $con        = $conexao->query($consulta) or die($conexao->error);
             <li><a href="audio.php">Áudio</a></li>
             <li><a href="gabinetes.php">Gabinetes</a></li>
             <li><a href="redes.php">Redes</a></li>      
-            <?php include '../inc/PTverificaLoginAdm.inc'; ?>
+            <?php include '../inc/PTverificaLogadoAdm.inc'; ?>
         </ul>
     </div>
 
@@ -57,7 +57,7 @@ $con        = $conexao->query($consulta) or die($conexao->error);
         Essas informações <font color='red'>NÃO PODEM</font> <br> ser acessadas por você
         <br><a href='entrar.php'>Faça Login</a>para ver o conteúdo
         </div>"; } else {
-            include '../inc/form.inc';
+            include '../inc/PTformulario.inc';
         }
     ?>
 </div>
