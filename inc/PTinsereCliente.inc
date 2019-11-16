@@ -21,11 +21,11 @@ $con      = $conexao->query($selecao) or die($conexao->error);
 $array    = $con->fetch_array();
 $logarray = $array['email'];
 
-if (getenv("REQUEST_METHOD") == "POST") { 
-  if($Email == "" || $Email == null){ //Verificação já feita no HTML
+if (getenv("REQUEST_METHOD") == "POST") {
+  if($Email == "" || $Email == null) { //Verificação já feita no HTML
     echo"<script>alert('O campo Email deve ser preenchido');window.location.href='../ptBR/cadastro.html';window.parent.document.title = x;</script>";
   } else {
-      if($logarray == $Email){ //Verificação no servidor
+      if($logarray == $Email) { //Verificação no servidor
  
         exit("<p uk-margin>
                 <script type='text/javascript'>
@@ -36,19 +36,19 @@ if (getenv("REQUEST_METHOD") == "POST") {
                 </script>
               </p>");
 
-  } else if ($conexao->query($sql) == TRUE) { 
-	ini_set('max_execution_time', 300); //Aumenta tempo de execução antes do time out
-	exit("<p uk-margin>
-                <script type='text/javascript'>
-                  UIkit.modal.alert('CADASTRADO COM SUCESSO !!! REDIRECIONANDO...').then(function() {
-                  window.location.replace('../ptBR/entrar.php');
-                  })
-                  blur()
-                </script>
-              </p>");
+      } else if ($conexao->query($sql) == TRUE) { 
+        ini_set('max_execution_time', 300); //Aumenta tempo de execução antes do time out
+        exit("<p uk-margin>
+                      <script type='text/javascript'>
+                        UIkit.modal.alert('CADASTRADO COM SUCESSO !!! REDIRECIONANDO...').then(function() {
+                        window.location.replace('../ptBR/entrar.php');
+                        })
+                        blur()
+                      </script>
+                    </p>");
 
-	} else { 
-    exit("<p uk-margin>
+      } else { 
+        exit("<p uk-margin>
                 <script type='text/javascript'>
                   UIkit.modal.alert('OOPS... ALGO DEU ERRADO').then(function() {
                   window.location.replace('../ptBR/cadastro.php');
@@ -56,8 +56,8 @@ if (getenv("REQUEST_METHOD") == "POST") {
                   blur()
                 </script>
               </p>");
+      }
   }
-}
 }
 $conexao->close();
 ?>

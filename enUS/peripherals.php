@@ -31,7 +31,7 @@
         <ul>
             <strong>CATEGORIES</strong>
             <li><a href="computers.html">Computers</a></li>
-            <li><a id="ativado" href="peripherals.html">Peripherals</a></li>
+            <li><a href="peripherals.html">Peripherals</a></li>
             <li><a href="accessories.html">Accessories</a></li>
             <li><a href="games.html">Games</a></li>
             <li><a href="storage.html">Storage</a></li>

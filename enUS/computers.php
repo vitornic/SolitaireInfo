@@ -30,7 +30,7 @@
     <div class="sidebar">
         <ul>
             <strong>CATEGORIES</strong>
-            <li><a id="ativado" href="computers.html">Computers</a></li>
+            <li><a href="computers.html">Computers</a></li>
             <li><a href="peripherals.html">Peripherals</a></li>
             <li><a href="accessories.html">Accessories</a></li>
             <li><a href="games.html">Games</a></li>

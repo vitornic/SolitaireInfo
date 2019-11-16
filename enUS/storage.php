@@ -34,7 +34,7 @@
             <li><a href="peripherals.html">Peripherals</a></li>
             <li><a href="accessories.html">Accessories</a></li>
             <li><a href="games.html">Games</a></li>
-            <li><a id="ativado" href="storage.html">Storage</a></li>
+            <li><a href="storage.html">Storage</a></li>
             <li><a href="video.html">Video</a></li>
             <li><a href="audio.html">Audio</a></li>
             <li><a href="cabinets.html">Cabinets</a></li>

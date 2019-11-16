@@ -38,7 +38,7 @@
             <li><a href="video.html">Video</a></li>
             <li><a href="audio.html">Audio</a></li>
             <li><a href="cabinets.html">Cabinets</a></li>
-            <li><a id="ativado" href="network.html">Network</a></li>
+            <li><a href="network.html">Network</a></li>
         </ul>
     </div>
 

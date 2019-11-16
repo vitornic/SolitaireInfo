@@ -8,36 +8,9 @@
 </head>
 
 <body>
-<div class="nav">
-        <form method="POST" action="pesquisa.php">
-            <ul>
-                <a href="inicio.php"><img src="../images/thumbnail_Logo Solitarie.png"></a>
-                <input name="pesq" id="pesq" type="text" placeholder="PESQUISAR">
-                <input type="submit" id="lupa" value="      ">
+    <?php include '../inc/PTnavSuperior.inc'; ?>
 
-                <li><a href="../enUS/#.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a></li>
-                
-                <?php include '../inc/PTverificaLogadoCliente.inc'; ?>
-                <li><a href="formulario.php">Formulário</a></li>
-            </ul>
-        </form>
-    </div>
-
-    <div class="sidebar">
-        <ul>
-            <strong>CATEGORIAS</strong>
-            <li><a href="computadores.php">Computadores</a></li>
-            <li><a href="perifericos.php">Periféricos</a></li>
-            <li><a href="acessorios.php">Acessórios</a></li>
-            <li><a href="jogos.php">Jogos</a></li>
-            <li><a href="hardware.php">Armazenamento</a></li>
-            <li><a href="video.php">Vídeo</a></li>
-            <li><a href="audio.php">Áudio</a></li>
-            <li><a href="gabinetes.php">Gabinetes</a></li>
-            <li><a href="redes.php">Redes</a></li>      
-            <?php include '../inc/PTverificaLogadoAdm.inc'; ?>
-        </ul>
-    </div>
+    <?php include '../inc/PTnavLateral.inc'; ?>
 
     <form method="POST" action="../php/verificaadm.php" class="boxform" accept-charset="UTF-8">
         <h1>cadastro Administrativo</h1>
@@ -51,6 +24,4 @@
         <h4><a href="entraradm.php">Já possui tem um cadastro ?</a></h4>
     </form>
 </body>
-
-
 </html>
