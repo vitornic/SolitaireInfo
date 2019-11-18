@@ -22,15 +22,19 @@
                     case "cadastro.php":
                         echo '<li><a href="../enUS/signup.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
                         break;
+                    /*
                     case "cadastroadm.php":
                         echo '<li><a href="../enUS/signupadm.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
                         break;
+                    */
                     case "entrar.php":
                         echo '<li><a href="../enUS/login.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
                         break;
+                    /*
                     case "entraradm.php":
                         echo '<li><a href="../enUS/loginadm.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
                         break;
+                    */
                     case "computadores.php":
                         echo '<li><a href="../enUS/computers.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
                         break;
@@ -70,7 +74,6 @@
             ?>
 
             <?php include '../inc/PTverificaLogadoCliente.inc'; ?>
-            <li><a href="formulario.php">Formulário</a></li>
         </ul>
     </form>
 </nav>
