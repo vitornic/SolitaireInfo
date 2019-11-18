@@ -64,6 +64,8 @@
                     case "cadastrodetipo.php":
                         echo '<li><a href="../enUS/signprodtype.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
                         break;
+                    default:
+                        echo '<li><a href="../php/emconst.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
                 }
             ?>
 

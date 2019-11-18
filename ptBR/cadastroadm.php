@@ -14,8 +14,7 @@
 
     <form method="POST" action="../php/verificaadm.php" class="boxform" accept-charset="UTF-8">
         <h1>cadastro Administrativo</h1>
-        <label for="nome">
-                            <input id="idNome" name="ADMNome" type="text" placeholder="Nome" maxlength="100" required="true"></label>
+        <input id="idNome" name="ADMNome" type="text" placeholder="Nome" maxlength="100" required="true"></label>
         <input placeholder="Email" type="Email" name="ADMEmail" required="true" maxlength="100" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="exemple@exemple.com">
         <input placeholder="Senha" type="password" size="20" name="ADMSenha" required = "true">
         <input placeholder="Telefone" name="ADMTel" maxlength="11" type="text" pattern="[0-9]{2}[0-9]{9}$" required="true">
