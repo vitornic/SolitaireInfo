@@ -10,6 +10,6 @@ $cod_valid = md5(uniqid(rand()));
 
 if ($erro == 0) {
 	echo ".<br>";
-	include '../inc/insereCliente.inc';
+	include '../inc/PTinsereCliente.inc';
 }
 ?>

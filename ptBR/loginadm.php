@@ -1,6 +1,8 @@
 <?php
-    include '../inc/cabecalho.inc';
+    include '../inc/PTcabecalho.inc';
     include '../inc/conecta_mysql.inc';
+
+    $paginaAtual = $_SERVER['HTTP_REFERER'];
 
     if(isset($_POST['emailADM'])) {
         $Email   = $_POST['emailADM'];
@@ -16,7 +18,16 @@
 
     if (isset($entrar)) {
                      
-        $verifica = $conexao->query("SELECT * FROM `administradores` WHERE email = '".$Email."' AND senha = '".$Senha."'") or die("erro ao selecionar");
+        $verifica = $conexao->query("SELECT * FROM `administradores` WHERE email = '".$Email."' AND senha = '".$Senha."'") or
+        die("<p uk-margin>
+                    <script type='text/javascript'>
+                        UIkit.modal.alert('Algo deu errado...').then(function() {
+                        window.location.replace('$paginaAtual');
+                        })
+                        blur();
+                    </script>
+                </p>");
+
         if (mysqli_num_rows($verifica)<=0){
                 exit("<p uk-margin>
                         <script type='text/javascript'>
@@ -27,7 +38,16 @@
                         </script>
                     </p>");
         } else {
-            $con    = $conexao->query("SELECT nome FROM `administradores` WHERE email = '".$Email."'") or die("erro ao selecionar");
+            $con    = $conexao->query("SELECT nome FROM `administradores` WHERE email = '".$Email."'") or 
+            die("<p uk-margin>
+                    <script type='text/javascript'>
+                        UIkit.modal.alert('Algo deu errado...').then(function() {
+                        window.location.replace('$paginaAtual');
+                        })
+                        blur();
+                    </script>
+                </p>");
+
             $array  = $con->fetch_array();
             $nome   = $array[0];
 
