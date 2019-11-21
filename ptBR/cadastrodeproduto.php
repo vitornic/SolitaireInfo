@@ -58,5 +58,17 @@
         <input type="reset" value="LIMPAR">
         <h4><a href="cadastrodetipo.php">Cadastrar um tipo de Produto</h4>
     </form>
+    <?php
+    @$login_cookie = $_COOKIE['Email'];
+    if(!isset($login_cookie)) {
+        echo "<br>";
+        echo "<div class = 'boxform'>
+        Bem-Vindo, convidado <br>
+        Essas informações <font color='red'>NÃO PODEM</font> <br> ser acessadas por você
+        <br><a href='entrar.php'>Faça Login</a>para ver o conteúdo
+        </div>"; } else {
+            include '../inc/PTformulario.inc';
+        }
+    ?>
 </body>
 </html>
