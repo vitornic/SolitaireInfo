@@ -20,7 +20,7 @@
         <input placeholder="Phone" name="CTel" maxlength="11" type="text" pattern="[0-9]{2}[0-9]{9}$" required="true">
         <input type="submit" value="Sign Up" name="entrar">
         <input type="reset" value="CLEAR">
-        <h4><a href="login.html">Already registered?</h4>
+        <h4><a href="login.php">Already registered?</h4>
          <h4><a href="signupadm.php"><font color=red>Administrator Signup</font></a></h4>
     </form>
 </body>

@@ -20,7 +20,7 @@
         <input placeholder="Phone" name="ADMTel" maxlength="11" type="text" pattern="[0-9]{2}[0-9]{9}$" required="true">
         <input type="submit" value="REGISTER" name="entrar">
         <input type="reset" value="CLEAR">
-        <h4><a href="signupadm.php">Already Registered?<a></h4>
+        <h4><a href="loginadm.php">Already Registered?<a></h4>
     </form>
 </body>
 </html>

@@ -21,20 +21,16 @@
                         break;
                     case "cadastro.php":
                         echo '<li><a href="../enUS/signup.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
-                        break;
-                    /*
+                        break; 
                     case "cadastroadm.php":
                         echo '<li><a href="../enUS/signupadm.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
                         break;
-                    */
                     case "entrar.php":
                         echo '<li><a href="../enUS/login.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
                         break;
-                    /*
                     case "entraradm.php":
                         echo '<li><a href="../enUS/loginadm.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
                         break;
-                    */
                     case "computadores.php":
                         echo '<li><a href="../enUS/computers.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
                         break;
