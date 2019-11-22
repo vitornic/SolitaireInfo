@@ -1,7 +1,7 @@
 <nav class="nav">
-    <form method="POST" action="pesquisa.php">
+    <form method="POST" action="search.php">
         <ul>
-            <a href="inicio.php"><img src="../images/thumbnail_Logo Solitarie.png"></a>
+            <a href="home.php"><img src="../images/thumbnail_Logo Solitarie.png"></a>
             <input name="pesq" id="pesq" type="text" placeholder="SEARCH">
             <input type="submit" id="lupa" value="      ">
 
@@ -10,44 +10,44 @@
                 $pagatual = basename($_SERVER['SCRIPT_NAME']);
 
                 switch ($pagatual) {
-                    case "inicio.php":
+                    case "home.php":
                         echo '<li><a href="../ptBR/inicio.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
                         break;
-                    case "pesquisa.php":
-                        echo '<li><a href="../ptBR/pesqusa.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
+                    case "search.php":
+                        echo '<li><a href="../ptBR/pesquisa.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
                         break;
-                    case "formulario.php":
+                    case "form.php":
                         echo '<li><a href="../ptBR/formulario.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
                         break;
-                    case "cadastro.php":
-                        echo '<li><a href="../ptBR/cadastrar.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
+                    case "signup.php":
+                        echo '<li><a href="../ptBR/cadastro.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
                         break;
                     
-                    case "cadastroadm.php":
-                        echo '<li><a href="../ptBR/cadastraradm.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
+                    case "signupadm.php":
+                        echo '<li><a href="../ptBR/cadastroadm.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
                         break;
                     
-                    case "entrar.php":
+                    case "login.php":
                         echo '<li><a href="../ptBR/entrar.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
                         break;
                     
-                    case "entraradm.php":
+                    case "loginadm.php":
                         echo '<li><a href="../ptBR/entraradm.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
                         break;
                     
-                    case "computadores.php":
+                    case "computers.php":
                         echo '<li><a href="../ptBR/computadores.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
                         break;
-                    case "perifericos.php":
+                    case "peripherals.php":
                         echo '<li><a href="../ptBR/perifericos.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
                         break;
-                    case "acessorios.php":
-                        echo '<li><a href="../ptBR/accessorios.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
+                    case "accessories.php":
+                        echo '<li><a href="../ptBR/acessorios.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
                         break;
-                    case "jogos.php":
+                    case "games.php":
                         echo '<li><a href="../ptBR/jogos.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
                         break;
-                    case "hardware.php":
+                    case "storage.php":
                         echo '<li><a href="../ptBR/hardware.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
                         break;
                     case "video.php":
@@ -56,16 +56,16 @@
                     case "audio.php":
                         echo '<li><a href="../ptBR/audio.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
                         break;
-                    case "gabinetes.php":
+                    case "cabinets.php":
                         echo '<li><a href="../ptBR/gabinetes.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
                         break;
-                    case "redes.php":
-                        echo '<li><a href="../ptBR/rede.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
+                    case "network.php":
+                        echo '<li><a href="../ptBR/redes.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
                         break;
-                    case "cadastrodeproduto.php":
+                    case "registerprod.php":
                         echo '<li><a href="../ptBR/cadastrodeproduto.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
                         break;
-                    case "cadastrodetipo.php":
+                    case "registertype.php":
                         echo '<li><a href="../ptBR/cadastrodetipo.php" id="translate"><img src="../images/traducao.png" width="35px" height="35px"></a><li>';
                         break;
                     default:
@@ -73,7 +73,7 @@
                 }
             ?>
 
-            <?php include '../inc/PTverificaLogadoCliente.inc'; ?>
+            <?php include '../inc/enUS/ENverificaLogadoCliente.inc'; ?>
         </ul>
     </form>
 </nav>
