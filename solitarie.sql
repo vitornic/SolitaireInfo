@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.8.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 10-Nov-2019 às 17:20
--- Versão do servidor: 10.4.8-MariaDB
--- versão do PHP: 7.3.11
+-- Generation Time: 28-Nov-2019 às 23:33
+-- Versão do servidor: 10.1.34-MariaDB
+-- PHP Version: 7.2.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,8 +19,30 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `solitarie`
+-- Database: `solitarie`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `administradores`
+--
+
+CREATE TABLE `administradores` (
+  `codigo` bigint(20) NOT NULL,
+  `nome` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `senha` varchar(100) DEFAULT NULL,
+  `telefone` varchar(13) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `administradores`
+--
+
+INSERT INTO `administradores` (`codigo`, `nome`, `email`, `senha`, `telefone`) VALUES
+(1, 'vitor', 'vitoradm2@gmail.com', '123', '14365214786'),
+(2, 'JHONATA', 'jhonata@outlook.com', '123', '14365214786');
 
 -- --------------------------------------------------------
 
@@ -44,7 +66,10 @@ INSERT INTO `clientes` (`codigo`, `nome`, `email`, `senha`, `telefone`) VALUES
 (1, 'Albertin', 'albertin@gmail.com', '1', '14936521478'),
 (2, 'qwe', 'dois@gmail.com', 'qwe', '11111111111'),
 (3, 'qwe', 'qwe@qwe.com', '123', '11111111111'),
-(4, 'Vitor', 'vitor@gmail.com', '123', '14991497781');
+(4, 'Vitor', 'vitor@gmail.com', '123', '14991497781'),
+(5, 'qwe', 'asd@asd.com', '123', '14365214788'),
+(6, 'vitor', 'vitoradm@gmail.com', '123', '14365214787'),
+(7, 'JHONATA', 'jhonata@gmail.com', '123', '14411411241');
 
 -- --------------------------------------------------------
 
@@ -171,7 +196,9 @@ INSERT INTO `produtos` (`codigo`, `nome`, `descricao`, `C_Prod`, `P_Venda`, `fot
 (81, 'coca', '2 litro', '15.00', '20.00', 'coca.jpg', 1, 1),
 (82, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
 (83, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(84, 'diferente', 'diferente dois', '5.00', '7.00', 'abacate.jpg', 1, 1);
+(84, 'diferente', 'diferente dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
+(85, 'erysyh g', 'xdfghzdxhz', '0.00', '0.00', 'xz', 1, 1),
+(86, 'certo', 'certo', '0.00', '0.00', 'certo', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -207,23 +234,29 @@ CREATE TABLE `vendas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Índices para tabelas despejadas
+-- Indexes for dumped tables
 --
 
 --
--- Índices para tabela `clientes`
+-- Indexes for table `administradores`
+--
+ALTER TABLE `administradores`
+  ADD PRIMARY KEY (`codigo`);
+
+--
+-- Indexes for table `clientes`
 --
 ALTER TABLE `clientes`
   ADD PRIMARY KEY (`codigo`);
 
 --
--- Índices para tabela `fornecedores`
+-- Indexes for table `fornecedores`
 --
 ALTER TABLE `fornecedores`
   ADD PRIMARY KEY (`codigo`);
 
 --
--- Índices para tabela `produtos`
+-- Indexes for table `produtos`
 --
 ALTER TABLE `produtos`
   ADD PRIMARY KEY (`codigo`),
@@ -231,13 +264,13 @@ ALTER TABLE `produtos`
   ADD KEY `codTipo` (`codTipo`);
 
 --
--- Índices para tabela `tipoprod`
+-- Indexes for table `tipoprod`
 --
 ALTER TABLE `tipoprod`
   ADD PRIMARY KEY (`codigo`);
 
 --
--- Índices para tabela `vendas`
+-- Indexes for table `vendas`
 --
 ALTER TABLE `vendas`
   ADD PRIMARY KEY (`codigo`),
@@ -245,41 +278,47 @@ ALTER TABLE `vendas`
   ADD KEY `codCliente` (`codCliente`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de tabela `clientes`
+-- AUTO_INCREMENT for table `administradores`
+--
+ALTER TABLE `administradores`
+  MODIFY `codigo` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `codigo` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `codigo` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT de tabela `fornecedores`
+-- AUTO_INCREMENT for table `fornecedores`
 --
 ALTER TABLE `fornecedores`
   MODIFY `codigo` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de tabela `produtos`
+-- AUTO_INCREMENT for table `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `codigo` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
+  MODIFY `codigo` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
 
 --
--- AUTO_INCREMENT de tabela `tipoprod`
+-- AUTO_INCREMENT for table `tipoprod`
 --
 ALTER TABLE `tipoprod`
   MODIFY `codigo` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de tabela `vendas`
+-- AUTO_INCREMENT for table `vendas`
 --
 ALTER TABLE `vendas`
   MODIFY `codigo` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- Restrições para despejos de tabelas
+-- Constraints for dumped tables
 --
 
 --
