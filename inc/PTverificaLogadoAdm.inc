@@ -19,6 +19,12 @@ if(isset($_COOKIE["NomeADM"]) and (isset($_COOKIE["EmailADM"]))) {
         echo "<li><a href='cadastrodetipo.php'>Cadastro de Tipo</a></li>";
     }
 
+    if ($pagatual == 'cadastroForne.php') {
+        echo "<li><a id='ativado' href='cadastroForne.php'>Cadastro de Fornecedor</a></li>";
+    } else {
+        echo "<li><a href='cadastroForne.php'>Cadastro de Fornecedor</a></li>";
+    }
+
     echo "<li><a href = PTsair.php>Sair</a></li>";
 } else {
     

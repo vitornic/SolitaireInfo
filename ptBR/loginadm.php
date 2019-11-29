@@ -32,7 +32,7 @@
                 exit("<p uk-margin>
                         <script type='text/javascript'>
                             UIkit.modal.alert('EMAIL E/OU SENHA ERRADOS !!!').then(function() {
-                            window.location.replace('entrar.php');
+                            window.location.replace('entraradm.php');
                             })
                             blur()
                         </script>
@@ -56,7 +56,7 @@
             exit("<p uk-margin>
                     <script type='text/javascript'>
                             UIkit.modal.alert('LOGADO COM SUCESSO !!!').then(function() {
-                            window.location.replace('entrar.php');
+                            window.location.replace('entraradm.php');
                         })
                         blur()
                     </script>

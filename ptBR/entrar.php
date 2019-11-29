@@ -14,10 +14,11 @@
 
     <?php
     @$login_cookie = $_COOKIE['Email'];
+    @$nome_cookie  = $_COOKIE['Nome'];
     if(isset($login_cookie)){
         echo"<br>";
         echo "<div class='boxform'>";
-        echo"Bem-Vindo, ".$login_cookie." <br>";
+        echo"Bem-Vindo, ".$nome_cookie." <br>";
         echo"Você já está <font color='green'>LOGADO</font>";
         echo "</div>";
     } else {

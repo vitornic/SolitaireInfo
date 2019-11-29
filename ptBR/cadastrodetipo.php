@@ -12,10 +12,10 @@
 
     <?php include '../inc/PTnavLateral.inc'; ?>
 
-    <form method="POST" action="" class="boxform" accept-charset="UTF-8">
+    <form method="POST" action="../php/verificaTipoProd.php" class="boxform" accept-charset="UTF-8">
         <h1>Cadastro de Tipo</h1>
-        <input placeholder="Código do Produto" type="number" name="codigo">
-        <input placeholder="Descrição do Produto" type="text" name="descricao">
+        <input placeholder="Nome do Tipo de Produto" type="text" name="nome">
+        <input placeholder="Descrição do Tipo de Produto" type="text" name="descricao">
         <input type="submit" value="CADASTRAR">
         <input type="reset" value="LIMPAR">
         <h4><a href="cadastrodeproduto.php">Cadastrar um Produto</a></h4>
