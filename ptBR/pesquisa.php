@@ -39,17 +39,22 @@ mysqli_close($conexao);
 
 <div>
 		<?php
-  			@$login_cookie = $_COOKIE['Email'];
-    			if(isset($login_cookie)){
+              @$login_cookie = $_COOKIE['Nome'];
+              @$loginadm_cookie = $_COOKIE['NomeADM'];
+    			if(isset($login_cookie) or isset($loginadm_cookie)) {
                     echo "<center>";
     			    echo "<br>";
                     echo "<div class='boxmensagem'>";
-    			    echo "Bem-Vindo, $login_cookie <br>";
+                    if (isset($loginadm_cookie)) {
+                        echo "Bem-Vindo, $loginadm_cookie <br>";
+                    } else {
+                        echo "Bem-Vindo, $login_cookie <br>";
+                    }
 				    echo "Essas informações <font color='green'>PODEM</font> ser acessadas por você";
                     echo "</div>";
                     echo "<br>"; 
                 	include '../inc/PTMostrarPesquisa.inc';
-                    } else {
+                } else {
                     echo "<br>";
                     echo '<div class = "boxform">
                     <?php
@@ -57,7 +62,7 @@ mysqli_close($conexao);
                         Essas informações <font color="red">NÃO PODEM</font> ser acessadas por você
                         <br><a href="../ptBR/entrar.php">Faça Login</a> Para ler o conteúdo
                     </div>';
-                    }
+                }
 ?>
 </div>
 </html>

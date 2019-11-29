@@ -56,7 +56,9 @@
         <br>
         <input type="submit" value="CADASTRAR" id="enviar">
         <input type="reset" value="LIMPAR">
-        <h4><a href="cadastrodetipo.php">Cadastrar um tipo de Produto</h4>
+        <span><a href="cadastrodetipo.php"><strong>Cadastrar um tipo de Produto</strong></span><br><br>
+        <span><a href="relacaoProd.php"><strong>Relação de Produtos</strong></span>
+        <span><a href="relacaoTipo.php"><strong>Relação de Tipos</strong></span>
     </form>
 </body>
 </html>

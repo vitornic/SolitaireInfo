@@ -1,5 +1,10 @@
 <?php
 
-include '../inc/PTinsereTipo.inc';
+$erro			= 0;
+
+if ($erro == 0) {
+	echo ".<br>";
+	include '../inc/PTinsereTipo.inc';
+}
 
 ?>

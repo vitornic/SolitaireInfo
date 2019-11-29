@@ -1,6 +1,7 @@
 <?php
 
 include 'conecta_mysql.inc';
+include 'PTcabecalho.inc';
 
 $nome    = $_POST['nome'];
 $desc    = $_POST['descricao'];

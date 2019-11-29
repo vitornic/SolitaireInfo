@@ -3,7 +3,6 @@
 include 'PTcabecalho.inc';
 include 'conecta_mysql.inc';
 
-
 $nome   = $_POST['nomeForne'];
 $email  = $_POST['emailForne'];
 $fone   = $_POST['foneForne'];
