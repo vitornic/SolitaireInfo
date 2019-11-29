@@ -38,5 +38,8 @@
             <a href="formulario.php"><img src="../images/imgPromo.png"></a>
         </div>
     </div>
+    
+    <?php include '../inc/PTrodape.inc'; ?>
+    
 </body>
 </html>
