@@ -12,7 +12,7 @@
 		</tr>
 		<?php 
 		include '../inc/conecta_mysql.inc';
-		while($dado = $con->fetch_array()) { ?>
+		while($dado = $conexao->fetch_array()) { ?>
 		<tr>
 			<td><img src="../images/<?php echo $dado[5]; ?>" width="100px" height="100px"></td>
 			<td><?php echo $dado[1]; ?></td>

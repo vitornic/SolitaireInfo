@@ -19,7 +19,8 @@
         <input type="submit" value="CADASTRAR">
         <input type="reset" value="LIMPAR">
         <h4><a href="cadastrodeproduto.php">Cadastrar um Produto</a></h4>
+        <span><a href="relacaoProd.php"><strong>Relação de Produtos</strong></span>
+        <span><a href="relacaoTipo.php"><strong>Relação de Tipos</strong></span>
     </form>
-<?php include '../inc/PTrodape.inc'; ?>
 </body>
 </html>

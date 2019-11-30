@@ -15,12 +15,26 @@
 
     <?php include '../inc/PTcabecalho.inc'; ?>
 
-    <form method="POST" class="boxform">
-        <h1>EDITAR/ALTERAR</h1>
-        <label><input type="text" name="codigo" placeholder="CODIGO" pattern="[0-9]+$" title="Utiize apenas números"></label>
-        <label><input type="text" name="descricao" placeholder="DESCRICAO"></label><br><br>
-        <input type="submit" value="ENVIAR">
-    </form>
+    <div id="minhaDiv" style="display:none">
+        <form method="POST" class="boxform">
+            <h1>EDITAR PRODUTO</h1>
+            <label><input type="text" name="codigo" placeholder="CODIGO" pattern="[0-9]+$" title="Utiize apenas números"></label>
+            <label><input type="text" name="descricao" placeholder="DESCRICAO"></label><br><br>
+            <input type="submit" value="ENVIAR">
+        </form>
+    </div>
+
+    <button class="btn-pesquisar" type="button" onclick="Mudarestado('minhaDiv')">PESQUISAR</button>
+
+    <script>
+        function Mudarestado(el) {
+            var display = document.getElementById(el).style.display;
+            if (display == "none")
+                document.getElementById(el).style.display = 'block';
+            else
+                document.getElementById(el).style.display = 'none';
+        }
+    </script>
 
     <?php
         if (count($_POST) > 0) {
@@ -61,7 +75,7 @@
                 echo "<tr id='idTabela'>
                         <td>$cod</td>
                         <td>$desc</td>
-                        <td><a href='../php/editarprod.php?op=E&codigo=$cod'><img src='../images/icons8-editar-vários-50.png'</a></td>
+                        <td><a href='relacaoProd.php?op=E&codigo=$cod' onclick='Mudarestado('minhaDiv')'><img src='../images/icons8-editar-vários-50.png'</a></td>
                         <td><a href='relacaoProd.php?op=X&codigo=$cod'><img src='../images/icons8-lixo-50.png'</a></td>
                     </tr>";
                 echo "</center>";
@@ -71,61 +85,7 @@
         }
         ?>
 
-        <?php
-
-        if (count($_GET) > 0) {
-
-            include '../inc/conecta_mysql.inc';
-
-            @$oper = $_GET['op'];
-            @$cod = $_GET['codigo'];
-
-            echo '<script>console.log("Operacao '.$oper.'  codigo '.$cod.'")</script>';
-
-            if ($oper == 'X') {
-                $sql = "DELETE from produtos WHERE codigo = ".$cod;
-                    
-                @$rs = mysqli_query($conexao, $sql) or die('<center><span style="color:#ff0000">ERRO DE EXCLUSÃO</span></center>');
-                exit("<p uk-margin>
-                    <script type='text/javascript'>
-                      UIkit.modal.alert('EXCLUIDO COM SUCESSO !!! REDIRECIONANDO...').then(function() {
-                      window.location.replace('../ptBR/relacaoProd.php');
-                      })
-                      blur()
-                    </script>
-                  </p>");
-            } 
-            
-            if ($oper == 'E') {
-                echo '<fieldset><legend>EDITAR</legend><form method="POST">
-                CODIGO: '.$cod.'
-                <br>DESCRICAO: <input type="text" name="txtDesc"><br>
-                <br><input type="submit" value="ATUALIZAR"><br>
-                </form></fieldset>';
-                
-                @$newdesc = $_POST['txtDesc'];
-                @$sql = "SELECT produtos SET descricao='$newdesc' WHERE codigo = $cod";
-                
-                
-                $rs = mysqli_query($conexao, $sql) or die('<center><span style="color:#ff0000">ERRO AO EDITAR</span></center>');
-                exit("<p uk-margin>
-                    <script type='text/javascript'>
-                      UIkit.modal.alert('EDITADO COM SUCESSO !!! REDIRECIONANDO...').then(function() {
-                      window.location.replace('../ptBR/relacaoProd.php');
-                      })
-                      blur()
-                    </script>
-                  </p>");
-            }
-
-            mysqli_close($conexao);
-        }
-
-        
-    ?>
-
-    <!-- <?php include '../inc/PTrelacoes.inc'; ?> -->
-<?php include '../inc/PTrodape.inc'; ?>
+        <?php  include '../inc/PTeditarProd.inc'; ?>
 </body>
 
 </html>

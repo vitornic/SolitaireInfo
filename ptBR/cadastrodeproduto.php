@@ -60,6 +60,8 @@
         <span><a href="relacaoProd.php"><strong>Relação de Produtos</strong></span>
         <span><a href="relacaoTipo.php"><strong>Relação de Tipos</strong></span>
     </form>
-<?php include '../inc/PTrodape.inc'; ?>
+
 </body>
+
 </html>
+
