@@ -24,5 +24,6 @@
         <h4><a href="entrar.php">Já possui tem um cadastro ?</a></h4>
         <h4><a href="cadastroadm.php"><font color=red>Cadastro Administrativo</font></a></h4>
     </form>
+<?php include '../inc/PTrodape.inc'; ?>
 </body>
 </html>

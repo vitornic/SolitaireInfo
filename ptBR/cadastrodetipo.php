@@ -20,5 +20,6 @@
         <input type="reset" value="LIMPAR">
         <h4><a href="cadastrodeproduto.php">Cadastrar um Produto</a></h4>
     </form>
+<?php include '../inc/PTrodape.inc'; ?>
 </body>
 </html>

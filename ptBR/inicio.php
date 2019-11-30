@@ -39,7 +39,6 @@
         </div>
     </div>
     
-    <?php include '../inc/PTrodape.inc'; ?>
-    
+<?php include '../inc/PTrodape.inc'; ?>
 </body>
 </html>

@@ -33,5 +33,6 @@
     }
     ?>
 
+<?php include '../inc/PTrodape.inc'; ?>
 </body>
 </html>

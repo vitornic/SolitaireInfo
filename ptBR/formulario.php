@@ -34,5 +34,6 @@ $con        = $conexao->query($consulta) or die($conexao->error);
         }
     ?>
 </div>
+<?php include '../inc/PTrodape.inc'; ?>
 </body>
 </html>

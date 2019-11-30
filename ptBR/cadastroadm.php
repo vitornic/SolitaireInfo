@@ -22,5 +22,6 @@
         <input type="reset" value="LIMPAR">
         <h4><a href="entraradm.php">Já possui tem um cadastro ?</a></h4>
     </form>
+<?php include '../inc/PTrodape.inc'; ?>
 </body>
 </html>

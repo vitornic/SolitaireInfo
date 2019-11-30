@@ -12,4 +12,5 @@
     header("refresh: 5;$paginaAtual");
 ?>
 
+<?php include '../inc/PTrodape.inc'; ?>
 </body>

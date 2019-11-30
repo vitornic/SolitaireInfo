@@ -23,6 +23,7 @@
         <h4><a href="login.php">Already registered?</h4>
          <h4><a href="signupadm.php"><font color=red>Administrator Signup</font></a></h4>
     </form>
+<?php include '../inc/PTrodape.inc'; ?>
 </body>
 
 </html>

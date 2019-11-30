@@ -12,5 +12,7 @@
         <?php include '../inc/PTnavLateral.inc'; ?>
 
         <?php include '../php/PTrelacoes.inc'; ?>
-    </body>
+        
+        <?php include '../inc/PTrodape.inc'; ?>
+</body>
 </html>

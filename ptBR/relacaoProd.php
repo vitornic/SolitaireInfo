@@ -125,6 +125,7 @@
     ?>
 
     <!-- <?php include '../inc/PTrelacoes.inc'; ?> -->
+<?php include '../inc/PTrodape.inc'; ?>
 </body>
 
 </html>

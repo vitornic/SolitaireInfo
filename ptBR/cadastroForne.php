@@ -22,6 +22,7 @@
         <input type="submit" value="CADASTRAR">
         <input type="reset" value="LIMPAR">
     </form>
+<?php include '../inc/PTrodape.inc'; ?>
 </body>
 
 </html>

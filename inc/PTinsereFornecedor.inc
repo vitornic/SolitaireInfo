@@ -21,9 +21,6 @@ $array    = $con->fetch_array();
 $logarray = $array['email'];
 
 if (getenv("REQUEST_METHOD") == "POST") {
-  if($email == "" || $email == null) { //Verificação já feita no HTML
-    echo"<script>alert('O campo Email deve ser preenchido');window.location.href='../ptBR/cadastro.html';window.parent.document.title = x;</script>";
-  } else {
       if($logarray == $email) { //Verificação no servidor
  
         exit("<p uk-margin>
@@ -40,7 +37,7 @@ if (getenv("REQUEST_METHOD") == "POST") {
         exit("<p uk-margin>
                       <script type='text/javascript'>
                         UIkit.modal.alert('CADASTRADO COM SUCESSO !!! REDIRECIONANDO...').then(function() {
-                        window.location.replace('../ptBR/entrar.php');
+                        window.location.replace('../ptBR/inicio.php');
                         })
                         blur()
                       </script>
@@ -57,6 +54,5 @@ if (getenv("REQUEST_METHOD") == "POST") {
               </p>");
       }
   }
-}
 $conexao->close();
 ?>
