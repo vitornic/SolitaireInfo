@@ -12,22 +12,7 @@
     <?php include '../inc/PTnavSuperior.inc'; ?>
     
     <?php include '../inc/PTnavLateral.inc'; ?>
-
-    <div class="container">
-        <div class="pricing-table table1">
-            <div class="pricing-header">
-                <div class="title">Jogos</div>
-            </div>
-            <div class="price"><img src="../images/jogos.png" width="233" height="200">
-                <ul class="pricing-list">
-                    <li><strong>The Last Of US</strong> Remasterizado</li>
-                    <div class="border"></div>
-                    <li><strong>Plataforma</strong> PS4/PS4 PRO</li>
-                </ul>
-                <a href="#">Adquira Já</a>
-            </div>
-        </div>
-    </div>
-<?php include '../inc/PTrodape.inc'; ?>
+    
+    <?php include '../inc/PTmostrarPesquisa.inc'; ?>
 </body>
 </html>

@@ -13,25 +13,6 @@
     
     <?php include '../inc/PTnavLateral.inc'; ?>
 
-    <div class="container">
-        <div class="pricing-table table1">
-            <div class="pricing-header">
-                <div class="title">audio</div>
-            </div>
-            <div class="price"><img src="../images/audio.png" width="233" height="200" >
-                <ul class="pricing-list">
-                    <li><strong>speaker</strong> sony srsxb01b</li>
-                    <div class="border"></div>
-                    <li><strong>marca</strong> sony</li>
-                    <div class="border"></div>
-                    <li><strong>conexões</strong> bluetooth/usb/micro sd</li>
-                    <div class="border"></div>
-                    <li><strong>bateria</strong> 6 horas</li>
-                </ul>
-                <a href="#">Adquira Já</a>
-            </div>
-        </div>
-    </div>
-<?php include '../inc/PTrodape.inc'; ?>
+    <?php include '../inc/PTmostrarPesquisa.inc'; ?>
 </body>
 </html>

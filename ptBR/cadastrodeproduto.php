@@ -24,13 +24,13 @@
             <?php
                 include '../inc/conecta_mysql.inc';
 
-                $sql = "SELECT codigo, descricao FROM tipoprod";
+                $sql = "SELECT codigo, nome FROM tipoprod";
                 $rs = mysqli_query($conexao, $sql);
 
 
                 while ($row = mysqli_fetch_assoc($rs)) {
                     $cod = $row['codigo'];
-                    $desc = $row['descricao'];
+                    $desc = $row['nome'];
                     echo "<option value=$cod>$desc</option>";
                 }
             mysqli_close($conexao);

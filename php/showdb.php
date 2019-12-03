@@ -67,6 +67,6 @@ EOD;
 ?>
 
 	</div>
-<?php include '../inc/PTrodape.inc'; ?>
+
 </body>
 </html>

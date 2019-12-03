@@ -13,25 +13,6 @@
 
     <?php include '../inc/PTnavLateral.inc'; ?>
 
-    <div class="container">
-        <div class="pricing-table table1">
-            <div class="pricing-header">
-                <div class="title">perifericos</div>
-            </div>
-            <div class="price"><img src="../images/teclado.png" width="233" height="200">
-                <ul class="pricing-list">
-                    <li><strong>TECLADO</strong> Razer BlackWidow Ultimate</li>
-                    <div class="border"></div>
-                    <li><strong>RGB</strong> 16581375 combinações de cores</li>
-                    <div class="border"></div>
-                    <li><strong>SWITCHS</strong> GREEN Switchs</li>
-                    <div class="border"></div>
-                    <li><strong>SOFTWARE</strong> Próprio</li>
-                </ul>
-                <a href="#">Adquira Já</a>
-            </div>
-        </div>
-    </div>
-<?php include '../inc/PTrodape.inc'; ?>
+    <?php include '../inc/PTmostrarPesquisa.inc'; ?>
 </body>
 </html>

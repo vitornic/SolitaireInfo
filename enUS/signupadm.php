@@ -22,6 +22,6 @@
         <input type="reset" value="CLEAR">
         <h4><a href="loginadm.php">Already Registered?<a></h4>
     </form>
-<?php include '../inc/PTrodape.inc'; ?>
+
 </body>
 </html>

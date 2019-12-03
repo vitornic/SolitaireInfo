@@ -31,7 +31,7 @@
     </form> ';
         }
     ?>
-<?php include '../inc/PTrodape.inc'; ?>
+
 </body>
 
 </footer>

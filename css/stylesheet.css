@@ -463,7 +463,6 @@ table {
     background-color: white;
     width: auto;
     height: auto;
-    margin-left: 22%;
   }
 
   td {
@@ -473,11 +472,6 @@ table {
 
   tr:nth-child(even) {
     background-color: #edf5ff; }
-
-  tr:hover {
-    background-color: rgb(0, 174, 255);
-    color: fff;
-  }
 
 /* fim tabela */
 
@@ -505,3 +499,8 @@ table {
 /* Fim das Mensagens de Login*/
 
 /* ------------------------------------------------------------------------------------------- */
+
+.separar {
+  float: left;
+  padding: 20px;
+}

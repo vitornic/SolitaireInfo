@@ -13,7 +13,7 @@
 
     <?php include '../inc/PTnavLateral.inc'; ?>
 
-    <?php include '../inc/PTrodape.inc'; ?>
+    
 </body>
 
 <?php
@@ -28,7 +28,7 @@ if (isset($_GET['pesq'])) {
 }
 
 
-$consulta = "SELECT p.codigo, p.nome, p.descricao, p.P_Venda, p.fotoProd, t.nome, t.descricao FROM produtos as p join tipoprod as t on p.codTipo = t.codigo ";
+$consulta = "SELECT p.fotoProd, p.nome, p.descricao, t.nome, p.P_Venda FROM produtos as p join tipoprod as t on p.codTipo = t.codigo ";
 
 $consulta = $consulta . " WHERE p.nome LIKE '%$desc%' OR t.descricao LIKE '%$desc%'";
 $con      = $conexao->query($consulta) or die($conexao->error);

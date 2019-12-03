@@ -65,7 +65,7 @@ if ($erro == 0) {
 ?>
 
 
-<?php include '../inc/PTrodape.inc'; ?>
+
 </body>
 </html>
 

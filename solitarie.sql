@@ -1,16 +1,16 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.2
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 28-Nov-2019 às 23:33
--- Versão do servidor: 10.1.34-MariaDB
--- PHP Version: 7.2.8
+-- Tempo de geração: 03-Dez-2019 às 06:43
+-- Versão do servidor: 10.4.8-MariaDB
+-- versão do PHP: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
-SET time_zone = "+00:00";
+SET time_zone = "-04:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -19,8 +19,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `solitarie`
+-- Banco de dados: `solitarie`
 --
+
+CREATE DATABASE `solitarie`;
 
 -- --------------------------------------------------------
 
@@ -42,7 +44,9 @@ CREATE TABLE `administradores` (
 
 INSERT INTO `administradores` (`codigo`, `nome`, `email`, `senha`, `telefone`) VALUES
 (1, 'vitor', 'vitoradm2@gmail.com', '123', '14365214786'),
-(2, 'JHONATA', 'jhonata@outlook.com', '123', '14365214786');
+(2, 'qwe', 'qwe@gmail.com', '123', '14991497781'),
+(3, 'qwe', 'qqwewe@gmail.com', '123', '14991497781'),
+(4, 'qwe', 'qwewqe@gmail.com', '111', '11111111111');
 
 -- --------------------------------------------------------
 
@@ -63,13 +67,14 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`codigo`, `nome`, `email`, `senha`, `telefone`) VALUES
-(1, 'Albertin', 'albertin@gmail.com', '1', '14936521478'),
 (2, 'qwe', 'dois@gmail.com', 'qwe', '11111111111'),
 (3, 'qwe', 'qwe@qwe.com', '123', '11111111111'),
 (4, 'Vitor', 'vitor@gmail.com', '123', '14991497781'),
-(5, 'qwe', 'asd@asd.com', '123', '14365214788'),
-(6, 'vitor', 'vitoradm@gmail.com', '123', '14365214787'),
-(7, 'JHONATA', 'jhonata@gmail.com', '123', '14411411241');
+(5, 'qwe', 'wea123re@hotmail.com', '123', '14991497781'),
+(6, 'qwe', 'qw1233123e@qwe.com', '123', '14991497781'),
+(7, '7-7*778.', 'doiqwes@gmail.com', '123', '11111111111'),
+(8, 'qqqqqq', 'qwe@q123we.com', '11111', '11111111111'),
+(9, 'qwe1', 'q123123we@qwe.com', '111', '14991497781');
 
 -- --------------------------------------------------------
 
@@ -89,7 +94,10 @@ CREATE TABLE `fornecedores` (
 --
 
 INSERT INTO `fornecedores` (`codigo`, `nome`, `email`, `telefone`) VALUES
-(1, 'Joao', 'joao@gmail.com', '14991497781');
+(1, 'Joao', 'joao@gmail.com', '14991497781'),
+(2, 'DoisEu', 'clauzereu@gmail.com', '14991497781'),
+(3, 'DoisEu123', 'clauzeqwereu@gmail.com', '14991497781'),
+(4, 'DoisEu', 'clauzeqqwewereu@gmail.com', '14991497781');
 
 -- --------------------------------------------------------
 
@@ -113,92 +121,15 @@ CREATE TABLE `produtos` (
 --
 
 INSERT INTO `produtos` (`codigo`, `nome`, `descricao`, `C_Prod`, `P_Venda`, `fotoProd`, `codTipo`, `codForne`) VALUES
-(1, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(2, 'Acabate Tres', 'Acabate Treis', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(3, 'Acabate Tres', 'Acabate Treis', '10.00', '7.00', 'abacate.jpg', 1, 1),
-(4, 'Acabate Tres', 'Acabate Treis', '10.00', '14.00', 'abacate.jpg', 1, 1),
-(5, 'Acabate', 'Acabate Treis', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(6, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(7, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(8, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(9, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(10, 'Acabate', 'Acabate Treis', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(11, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(12, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(13, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(14, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(15, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(16, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(17, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(18, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(19, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(20, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(21, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(22, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(23, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(24, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(25, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(26, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(27, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(28, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(29, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(30, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(31, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(32, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(33, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(34, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(35, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(36, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(37, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(38, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(39, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(40, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(41, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(42, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(43, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(44, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(45, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(46, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(47, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(48, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(49, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(50, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(51, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(52, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(53, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(54, 'Acabate Tres', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(55, 'Acabate Tres', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(56, 'Acabate Tres', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(57, 'Acabate Tres', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(58, 'Acabate Tres', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(59, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(60, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(61, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(62, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(63, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(64, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(65, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(66, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(67, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(68, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(69, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(70, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(71, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(72, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(73, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(74, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(75, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(76, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(77, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(78, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(79, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(80, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(81, 'coca', '2 litro', '15.00', '20.00', 'coca.jpg', 1, 1),
-(82, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(83, 'Acabate', 'Acabate Dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(84, 'diferente', 'diferente dois', '5.00', '7.00', 'abacate.jpg', 1, 1),
-(85, 'erysyh g', 'xdfghzdxhz', '0.00', '0.00', 'xz', 1, 1),
-(86, 'certo', 'certo', '0.00', '0.00', 'certo', 1, 1);
+(1, 'Dell Inspiron', 'Dell Inspiron 4gb', '800.00', '1100.00', 'notebook.jpg', 1, 1),
+(2, 'Teclado deathstalker', 'Gamer, Iluminado', '300.00', '499.00', 'teclado.png', 2, 2),
+(3, 'Controle Xbox', 'controle xbox', '100.00', '200.00', 'xbox.png', 3, 3),
+(4, 'The Last of Us', 'Jogo The Last of Us', '50.00', '100.00', 'jogos.png', 4, 4),
+(5, 'SDD', '5mb/s leitura, 4mb/s gravação', '180.00', '200.00', 'ssd.png', 5, 2),
+(6, 'placa de video', 'geforce galaxy', '600.00', '750.00', 'video.png', 6, 1),
+(7, 'Caixa de som', 'led, bluetooth', '80.00', '120.00', 'audio.png', 7, 1),
+(8, 'Roteador', '15m', '110.00', '150.00', 'redes.png', 9, 2),
+(9, 'Venennum', '32gb RAM ddr4, intel i7 9900KS', '12000.00', '15000.00', 'pc.png', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -217,7 +148,15 @@ CREATE TABLE `tipoprod` (
 --
 
 INSERT INTO `tipoprod` (`codigo`, `nome`, `descricao`) VALUES
-(1, 'Abacate', 'Abacate Dois');
+(1, 'Computador', 'Categoria de Computadores'),
+(2, 'Perifericos', 'Categoria de Perifericos'),
+(3, 'Acessorios', 'Categoria de Acessorios'),
+(4, 'Jogos', 'Categoria para jogos'),
+(5, 'armazenmento', 'categoria para armazenamento'),
+(6, 'Video', 'categoria para video'),
+(7, 'Audio', 'Categoria para audio'),
+(8, 'Gabinetes', 'Categoria para gabinetes'),
+(9, 'Redes', 'categoria para redes');
 
 -- --------------------------------------------------------
 
@@ -234,29 +173,29 @@ CREATE TABLE `vendas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Indexes for dumped tables
+-- Índices para tabelas despejadas
 --
 
 --
--- Indexes for table `administradores`
+-- Índices para tabela `administradores`
 --
 ALTER TABLE `administradores`
   ADD PRIMARY KEY (`codigo`);
 
 --
--- Indexes for table `clientes`
+-- Índices para tabela `clientes`
 --
 ALTER TABLE `clientes`
   ADD PRIMARY KEY (`codigo`);
 
 --
--- Indexes for table `fornecedores`
+-- Índices para tabela `fornecedores`
 --
 ALTER TABLE `fornecedores`
   ADD PRIMARY KEY (`codigo`);
 
 --
--- Indexes for table `produtos`
+-- Índices para tabela `produtos`
 --
 ALTER TABLE `produtos`
   ADD PRIMARY KEY (`codigo`),
@@ -264,13 +203,13 @@ ALTER TABLE `produtos`
   ADD KEY `codTipo` (`codTipo`);
 
 --
--- Indexes for table `tipoprod`
+-- Índices para tabela `tipoprod`
 --
 ALTER TABLE `tipoprod`
   ADD PRIMARY KEY (`codigo`);
 
 --
--- Indexes for table `vendas`
+-- Índices para tabela `vendas`
 --
 ALTER TABLE `vendas`
   ADD PRIMARY KEY (`codigo`),
@@ -278,47 +217,47 @@ ALTER TABLE `vendas`
   ADD KEY `codCliente` (`codCliente`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de tabelas despejadas
 --
 
 --
--- AUTO_INCREMENT for table `administradores`
+-- AUTO_INCREMENT de tabela `administradores`
 --
 ALTER TABLE `administradores`
-  MODIFY `codigo` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `codigo` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `clientes`
+-- AUTO_INCREMENT de tabela `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `codigo` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `codigo` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `fornecedores`
+-- AUTO_INCREMENT de tabela `fornecedores`
 --
 ALTER TABLE `fornecedores`
-  MODIFY `codigo` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `codigo` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `produtos`
+-- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `codigo` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
+  MODIFY `codigo` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
 
 --
--- AUTO_INCREMENT for table `tipoprod`
+-- AUTO_INCREMENT de tabela `tipoprod`
 --
 ALTER TABLE `tipoprod`
-  MODIFY `codigo` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `codigo` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `vendas`
+-- AUTO_INCREMENT de tabela `vendas`
 --
 ALTER TABLE `vendas`
   MODIFY `codigo` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- Constraints for dumped tables
+-- Restrições para despejos de tabelas
 --
 
 --
