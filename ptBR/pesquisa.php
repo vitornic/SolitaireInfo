@@ -3,7 +3,7 @@
 
 <head>
     <link rel="icon" type="image/png" href="../images/fav.png">
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
     <title>Login</title>
 </head>
@@ -13,7 +13,6 @@
 
     <?php include '../inc/PTnavLateral.inc'; ?>
 
-    
 </body>
 
 <?php

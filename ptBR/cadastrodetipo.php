@@ -14,7 +14,7 @@
 
     <form method="POST" action="../php/verificaTipoProd.php" class="boxform" accept-charset="UTF-8">
         <h1>Cadastro de Tipo</h1>
-        <input placeholder="Nome do Tipo de Produto" type="text" name="nome">
+        <input placeholder="Nome do Tipo de Produto" type="text" name="nome" required="true">
         <input placeholder="Descrição do Tipo de Produto" type="text" name="descricao">
         <input type="submit" value="CADASTRAR">
         <input type="reset" value="LIMPAR">
