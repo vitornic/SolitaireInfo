@@ -27,7 +27,7 @@
                         <td><?php echo 'R$ '.$dado['4'] ?></td>
                     </tr>
                     <tr>
-                        <td><button>COMPRAR</button></td>
+                        <td><button class="btnComprar">COMPRAR</button></td>
                     </tr>
                 </td>
             </table>
